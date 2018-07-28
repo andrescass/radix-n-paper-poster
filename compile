@@ -1,0 +1,16 @@
+#!/bin/bash
+
+cp ./latex/*.tex ./
+cp ./latex/*.sty ./
+pdflatex ./poster.tex
+pdflatex ./poster.tex
+rm *.log
+rm *.aux
+rm *.tex
+rm *.sty
+rm *.nav
+rm *.out
+rm *.snm
+rm *.toc
+
+mv ./poster.pdf ./pdf/poster_case_2015.pdf
