@@ -1,4 +1,5 @@
 \documentclass[final]{beamer}
+%\usetheme{CASE_ASICS}
 \usetheme{CASE_WirelessCommunications}
 
 
@@ -153,7 +154,7 @@
 			\begin{column}{.44\textwidth}
 				\begin{figure}[htb!]
 				        \centering
-				        \includegraphics[width=12cm]{./figures/datapathMem.png}
+				        \includegraphics[width=13cm]{./figures/datapathMem.png}
 				        \caption{Radix-2 implementation diagram}
 				        \label{fig:datapathmem}
 				\end{figure}
@@ -161,8 +162,7 @@
 			\begin{column}{.45\textwidth}
 				\begin{figure}[htb!]
 				        \centering
-				        \includegraphics[width=11
-				        cm]{./figures/r4control.png}
+				        \includegraphics[width=12cm]{./figures/r4control.png}
 				        \caption{Radix-4 implementation diagram}
 				        \label{fig:datapathR4control}
 				\end{figure}
@@ -197,7 +197,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % BEGIN MESA algorithm continuation
 
-		\begin{block}{characterizations}
+		\begin{block}{Characterization}
 		\justify
 			Beside of the individual tests for every composing unit, a set of tests is performed over the entire architectures in order to verify and validate the design.
 			For a complete description of tests and results, refer to the article related to this poster.
@@ -224,7 +224,7 @@
 				\begin{table}[htb!]
 				\caption{$E_\infty$ for 1024 simulations, random inputs}
 				\begin{tabular}{l c c}
-				 & \textbf{1024, 16 bits} & \textbf{4096, 16 bits}\\ \hline 
+				 & \textbf{1024 points} & \textbf{4096 points}\\ \hline 
 				\textbf{R-2, Cordic} & $0.006$ & $0.008 $\\
 				\textbf{R-2, Mult.} & $0.003$ & $0.108$\\
 				\textbf{R-4, Cordic} & $0.003$ & $0.007$\\
@@ -236,7 +236,7 @@
 				\begin{table}[htb!]
 				\caption{$E_2$ for 1024 simulations, random inputs}
 				\begin{tabular}{l c c}
-				 & \textbf{1024, 16 bits} & \textbf{4096, 16 bits}\\ \hline 
+				 & \textbf{1024 points} & \textbf{4096 points}\\ \hline 
 				\textbf{R-2, Cordic} & $0.007$  & $0.053$\\
 				\textbf{R-2, Mult.} & $0.004$ & $0.131$\\
 				\textbf{R-4, Cordic} & $0.002$ & $0.027$\\
@@ -246,23 +246,23 @@
 				\end{table}
 			\end{column}
 			
-			\begin{column}{.34\textwidth}
+			\begin{column}{.32\textwidth}
 			The main requirement for the design is the low space/resource occupation. $16$ bits iterative radix-2 and radix-4 architectures are 
 			synthesized and compared with a $16$ bits radix-2 sdf and Xilinx's LogiCORE FFT v7.1.
 				
 			\end{column}
 			\vrule
-			\begin{column}{.55\textwidth}
+			\begin{column}{.57\textwidth}
 				\begin{table}[htb!]
 				\caption{Resource occupation for $1024$ points}
 				\begin{tabular}{l c c c c}
 				 & \textbf{Slices} & \textbf{LUTs} & \textbf{Reg} & \textbf{LUTRAM}\\ \hline 
-				\textbf{r2-iter, cordic} & $855$ & $2712$ & $164$ & $1024$\\
-				\textbf{r2-iter, mult} & $659$ & $1884$ & $163$ & $1024$\\
-				\textbf{r4-iter, cordic} & $916$ & $2862$ & $165$ & $1152$\\
-				\textbf{r4-iter, mult} & $824$ & $2241$ & $260$ & $1152$\\
-				\textbf{r2-sdf} & $3369$ & $11386$ & $1425$ & $1056$\\
-				\textbf{Xilinx FFT v7} & $1050$ & $2541$ & $3684$ & $ $\\ \hline
+				\textbf{r2, cordic} & $855$ & $2712$ & $164$ & $1024$\\
+				\textbf{r2, mult} & $659$ & $1884$ & $163$ & $1024$\\
+				\textbf{r4, cordic} & $916$ & $2862$ & $165$ & $1152$\\
+				\textbf{r4, mult} & $824$ & $2241$ & $260$ & $1152$\\
+				\textbf{r2} & $3369$ & $11386$ & $1425$ & $1056$\\
+				\textbf{Xilinx FFT} & $1050$ & $2541$ & $3684$ & $ $\\ \hline
 				\end{tabular}
 				\label{table:res1024}
 				\end{table}
@@ -285,15 +285,14 @@
 			\begin{column}{.39\textwidth}
 			In order to meassure the ISDB-T utilization potential, the core is compared with an implementation made specifically for this use.\\
 			
-			The proposed core has lower resource ocupation and provides scaling options implemented. But it needs higher frequency operation clock in order to achieve ISDB-T sampling
-			frequency requirements because of the iterative architecture approach.				
+			The proposed core has lower resource ocupation and provides scaling options.			
 			\end{column}
 			\vrule
 			\begin{column}{.50\textwidth}
 				\begin{table}[htb!]
 				\caption{Comparison with ISDB-T oriented FFT IP Core}
 				\begin{tabular}{l c c }
-				 & \textbf{Iterative radix-2} & \textbf{Reference core}\\ \hline 
+				 & \textbf{Iter. r-2} & \textbf{Ref. IP core}\\ \hline 
 				\textbf{FF} & $533$ & $1334$\\
 				\textbf{LUT} & $3046$ & $4133$\\
 				\textbf{BRAM} & $62$ & $62$\\
