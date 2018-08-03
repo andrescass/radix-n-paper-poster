@@ -116,13 +116,13 @@
 			which reduces the complexity of the algorithm from $\mathcal{O}(n^2)$ to $\mathcal{O}(n \, log n)$
 			
 			The objective of this work is to obtain an FFT core, small enough to be included in a complete OFDM transceiver without consuming 
-			too much resources, but efficient and accurate enough to be useful in an ISDB-T television system.
-			
+			too much resources, but efficient and accurate enough to be useful in an ISDB-T television system.\\
+			~\\
 			The main requirements for the implementation can be summarized in:
 %
 			\begin{itemize}
-			  \item Run-time configurable FFT length, including at least 2K, 4K and 8K samples \cite{ISDB}.
-			  \item $8,126,984$ sampling frequency guaranteed \cite{ISDB}.
+			  \item Run-time configurable FFT length, including at least 2K, 4K and 8K samples.
+			  \item $8,126,984$ sampling frequency guaranteed.
 			  \item Continuous input and output (not burst mode).
 			  \item Fixed point arithmethics.
 			  \item Run-time configurable and step-selectible scaling, with rounding and clipping options.
@@ -143,18 +143,22 @@
 			reuse the same modules for all the r-point FFT computation.\\
 			
 			As the main objective is to achieve a low size core, an iterative version is chosen for implementation because it uses only one r-point FFT core for all the
-			$\nu$ sub-FFTs computations.
+			$\nu$ sub-FFTs computations. The limitation of this approach is given by the operation frequency. As the same module is used for every FFT stage, in a $\nu$ stage
+			implementation a $(f*\nu)$Hz clock is needed to achieve a $f$Hz sample frequency.\\  
 			  
 			Two architechtures are implemented, a radix-2 and a radix-4, in order to compare them and bring the possibility to choose
 			depending on the requirements of the specific application.\\
+			~\\
 			For twiddle factors multiplication two variants are implemented, an iterative cordic and an efficient complex multiplicator.\\
+			The escaling unit is implemented right after the butterfly / dragonfly unit in order to provide the optional rounding/clipping function. This is 
+			run-time configurable and brings the possibility to choose the stages where the scaling is applied. 
 			
 			Both implementation scheme are showed in Figures \ref{fig:datapathmem} and \ref{fig:datapathR4control}.
 			
 			\begin{column}{.44\textwidth}
 				\begin{figure}[htb!]
 				        \centering
-				        \includegraphics[width=13cm]{./figures/datapathMem.png}
+				        \includegraphics[width=14cm]{./figures/datapathMem.png}
 				        \caption{Radix-2 implementation diagram}
 				        \label{fig:datapathmem}
 				\end{figure}
@@ -162,7 +166,7 @@
 			\begin{column}{.45\textwidth}
 				\begin{figure}[htb!]
 				        \centering
-				        \includegraphics[width=12cm]{./figures/r4control.png}
+				        \includegraphics[width=13cm]{./figures/r4control.png}
 				        \caption{Radix-4 implementation diagram}
 				        \label{fig:datapathR4control}
 				\end{figure}
@@ -200,8 +204,8 @@
 		\begin{block}{Characterization}
 		\justify
 			Beside of the individual tests for every composing unit, a set of tests is performed over the entire architectures in order to verify and validate the design.
-			For a complete description of tests and results, refer to the article related to this poster.
-			
+			For a complete description of tests and results, refer to the article related to this poster.\\
+			~\\
 			\begin{column}{.37\textwidth}
 				In order to measure the architecture error, the 64 bits floating point Matlab FFT is taken as a benchmark.
 
@@ -217,6 +221,8 @@
 				\label{eq:norma2}
 				\end{equation}
 				where $X_o[n]$ is the Matlab FFT output and $X_{dut}[n]$ is the design under test output.
+				It is also measured the performance of a 16 bit integer C++ FFT, known as \emph{Kiss FFT}, as a testbench for the proposed core.\\
+			~\\
 				
 			\end{column}
 			\vrule
@@ -228,7 +234,8 @@
 				\textbf{R-2, Cordic} & $0.006$ & $0.008 $\\
 				\textbf{R-2, Mult.} & $0.003$ & $0.108$\\
 				\textbf{R-4, Cordic} & $0.003$ & $0.007$\\
-				\textbf{R-4, Mult.} & $0.002$ & $0.105$\\\hline
+				\textbf{R-4, Mult.} & $0.002$ & $0.105$\\
+				\textbf{Kiss FFT} & $0.017$ & $0.035$\\\hline
 				\end{tabular}
 				\label{table:errorInf}
 				\end{table}
@@ -240,12 +247,13 @@
 				\textbf{R-2, Cordic} & $0.007$  & $0.053$\\
 				\textbf{R-2, Mult.} & $0.004$ & $0.131$\\
 				\textbf{R-4, Cordic} & $0.002$ & $0.027$\\
-				\textbf{R-4, Mult.} & $0.003$ & $0.126$\\\hline 
+				\textbf{R-4, Mult.} & $0.003$ & $0.126$\\
+				\textbf{Kiss FFT} & $0.017$ & $0.035$\\\hline
 				\end{tabular}
 				\label{table:error2}
 				\end{table}
-			\end{column}
-			
+			\end{column}\\
+			~\\
 			\begin{column}{.32\textwidth}
 			The main requirement for the design is the low space/resource occupation. $16$ bits iterative radix-2 and radix-4 architectures are 
 			synthesized and compared with a $16$ bits radix-2 sdf and Xilinx's LogiCORE FFT v7.1.
@@ -330,7 +338,9 @@
 			
 			The low space/resource requirement is achieved, which made them suitable for
 			integration in large systems without impacting in the resource distribution, in case of FPGA implementation, or space in case of
-			ASIC implementation. 
+			ASIC implementation.\\
+			The architectures were implemented in Verilog HDL code. Also there were developed several testing tools
+			comprising Matlab, C++ programs and Verilog testbenchs.\\
 			For future work, it can be considered to add a dithering system, in order to reduce the noise generated by the architectures, and 
 			to implement a pipelined cordic without modifying the global architecture timing, in order to improve the throughput. 
         \end{block}
