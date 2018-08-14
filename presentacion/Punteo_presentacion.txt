@@ -1,0 +1,67 @@
+Tomo como diapositiva 1 la de título (como el pdf)
+
+Diapositiva 2:
+Breve mención de OFDM y su parecido con la IFFT/FFT. Posibilidad de calcularla usando esto último
+
+Diapositiva 3:
+Breve descripción de la FFT/IFFT
+
+Diapositiva 4:
+Objetivos: están explicados en el listado
+
+Diapositiva 6:
+No hay mucho que agregar salvo algun detalle extra sobre reutilización de módulos en radix-r
+
+Diapositiva 7:
+Solo mencionar que para elegir que radix utilizar se tuvieron en cuenta esas dos cantidades
+
+Diapositiva 8:
+Se explica bastante bien en las imágenes: la primera implementa cada suma y producto, la segunda reutiliza por etapas y la tercera tiene una unica unidad para todo.
+Como la idea es hacer el core lo más chico posible, se elige la tercer opción.
+
+Diapositivas 10 y 11:
+Muestran los esquemas simplificados y las implementaciones. A lo sumo se puede explicar brevemente los esquemas 
+
+Diapositiva 12:
+Se muestran los diagramas en bloque completos. Se pueden ir señalando las partes a medida que se mencionan y aclarar algo acerca del cordic
+y el multiplicador complejo (que es más rápido si la FPGA utilizada cuenta con unidad de DSP o multiplicadores)
+
+Diapositiva 14:
+Listado de pruebas, Solo mencionarlas ya que se ejemplifican mas adelante (se podría sacar esta diapositiva tal vez)
+
+Diapositiva 15:
+Señales patron. Bastante simple
+
+Diapositiva 16:
+Se explica el procedimiento de cálculo del error. Se generaron M vectores de entrada aleatorios, se usaron como entrada en las arquitecturas
+y se compararon las salidas con las calculadas mediante Matlab y se les calculó la media y la media cuadrática. 
+Lo que está graficado al lado es la distribución de los errores de cada
+vector individual
+
+Diapositiva 17: Valores de error calculados
+
+Diapositiva 18:
+Procedimiento de cálculo de THD: se generaron N vectores de entrada, uno para cada conmponente de frecuencia posible dependiendo de la 
+cantidad de muestras de cada arquitectura, se usaron de entrada a las arquitecturas y se les calculó la THD a la salida de cada
+componente.
+
+Diapositiva 19:
+Gráficos finales de THD. Lo graficado es THD vs componente de entrada. Se compara con la THD calculada para la FFT en C++ y para el core Xilinx
+
+Diapositiva 20:
+Ocupacion de recursos: se explica que plataforma se utilizó y contra que se comparó.
+
+Diapositiva 21 y 22: resultado de la medición de ocupación de recursos para dos tamaños de arquitectura máxima: 1024 y 4096
+
+Diapositiva 23: Comparación con el IP Core abierto (este fue el que me sugirió que use el corrector del paper). Tabla comparando recursos. 
+Se puede mencionar que nuestro core tiene implementado el escalamiento mientras que el otro no.
+
+Diapositiva 25: Conclusiones. Mas allá de lo que está escrito se puede aclarar el tema de la frecuencia de muestreo que se calcula
+dividiendo la fecuencia del clock en la cantidad de etapas, por esto de que se utiliza el mismo módulo para todos los cálculos por lo que
+entra y sale un punto cada log(N) ciclos de clock (o sea, la cantidad de etapas)
+
+Diapositiva 26: Trabajos futuros, no hay mucho que agregar.
+
+Creo que eso es todo
+Abrazos
+Resultados 

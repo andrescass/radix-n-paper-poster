@@ -1,0 +1,171 @@
+% \documentclass{beamer}
+% %
+% % Choose how your presentation looks.
+% %
+% % For more themes, color themes and font themes, see:
+% % http://deic.uab.es/~iblanes/beamer_gallery/index_by_theme.html
+% %
+% 
+% \definecolor{sidegray}{RGB}{77,128,137}
+% \definecolor{headgray}{RGB}{72,72,72}
+% \definecolor{logogray}{RGB}{78,78,78}
+% 
+% \mode<presentation>
+% {
+%   \usetheme[hideothersubsections]{PaloAlto} %PaloAlto     % or try Darmstadt, Madrid, Warsaw, ...
+%   \usecolortheme{dolphin} % dolphin or try albatross, beaver, crane, ...
+%   \usefonttheme{serif}  % or try serif, structurebold, ...
+%   %\setbeamertemplate{navigation symbols}{}
+%   \setbeamertemplate{caption}[numbered]
+%   \setbeamercolor{sidebar}{bg=sidegray!90!black}
+%   \setbeamercolor{frametitle}{bg=sidegray!90!black}
+%   \setbeamercolor{logo}{bg=sidegray!50!black} 
+%   %\setbeamercolor{background canvas}{bg=violet}
+%   %\setbeamertemplate{sidebar left}[]
+% } 
+
+\documentclass{bredelebeamer}
+
+
+\UseRawInputEncoding
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{tikz}
+
+\newcommand\Fontit{\fontsize{9}{15}\selectfont}
+\newcommand\Fontitit{\fontsize{8}{13}\selectfont}
+
+\title[SASE 2018]{FFT Core de tamaño reducido para
+transmisiones OFDM}
+\author[]{\fontsize{8}{12}\selectfont{\textit{Autores:} Ing. Andr\'es D.
+Cassagnes, Ing. Federico G. Zacchigna, Ing. Octavio Alapago, Dr. Ing. Ariel Lutenberg}}
+%\fontsize{8}{12}\selectfont{\textit{Director:} Dr. Ing. Ariel Lutenberg}\\
+%\fontsize{8}{12}\selectfont{\textit{Codirector:} Ing. Federico Giordano Zacchigna}}
+\institute[LSE-FIUBA]{\fontsize{7}{10}\selectfont{Laboratorio de Sistemas Embebidos}\\
+\fontsize{7}{10}\selectfont{Facultad de Ingenir\'ia\\ Universidad de Buenos Aires}}
+\date{16/08/2018}
+%\logo{\includegraphics[scale=0.10]{./figures/logoFIUBA.png}}
+
+% \makeatletter
+% %\setbeamertemplate{sidebar canvas left}{}
+% \setbeamertemplate{sidebar left}[sidebar theme]{%
+%     \vspace*{3.5cm}
+%     \vspace*{\fill}
+%     %\includegraphics[width=1.25cm]{ire_logo.png}\\
+%     %\includegraphics[width=1.25cm]{weiti_logo.png}\\
+%     %\includegraphics[width=1.25cm]{pw_logo.png}
+%     \vspace*{0.1cm}
+%     \vfill
+% 
+% }
+% \makeatother
+
+% \makeatletter
+% %\beamer@sidebarwidth=5 \baselineskip     %controls the height of the headline, default is 2.5
+% \beamer@headheight=1.5\baselineskip     %controls the height of the headline, default is 2.5 
+% %\setlength\beamer@sidebarwidth{2cm}   
+% \makeatother
+
+\hyphenation{Im-ple-men-ta-cion}
+
+\begin{document}
+
+\begin{frame}
+% \tikz [remember picture,overlay]
+%     \node at
+%         ([yshift=1.5cm]current page.south)
+%         ([xshift=1cm]current page.south) 
+%         %or: (current page.center)
+%         {\includegraphics[scale=0.10]{./figures/logoFIUBA.png}};
+  \titlepage
+\end{frame}
+
+% Uncomment these lines for an automatically generated outline.
+%\begin{frame}{Outline}
+%  \tableofcontents
+%\end{frame}
+
+\include{chapters/chapter_1}
+\include{chapters/chapter_2}
+\include{chapters/chapter_3}
+\include{chapters/chapter_4}
+
+\section{Conclusiones y trabajos futuros}
+
+\begin{frame}
+\begin{center}
+\Huge CONCLUSIONES Y TRABAJOS FUTUROS
+\end{center}
+\end{frame}
+
+\subsection{Conclusiones}
+\begin{frame}{Conclusiones}
+\Fontit
+\begin{itemize}
+%   \item<1-> Se diseÃ±aron e implementaron dos arquitecturas para el cÃ³mputo de la FFT
+  %\item<1-> Las arquitecturas implementadas cumplen con el requerimiento de la economÃ­a de recursos
+%   \item<3-> Se desarrollaron dos mÃ³dulos para el producto por los twiddle factors
+  \item<1-> Se presentaron dos arquitecturas radix-r iterativas para cómputo de FFT/IFFT
+  \begin{itemize}
+    \Fontitit
+    \item<2-> Radix-2 iterativa
+    \item<3-> Radix-4 iterativa
+    \item<4-> Unidad de multiplicación por Twiddle Factors basada en algoritmo Cordic
+    \item<5-> Unidad de multiplicación compleja eficiente para producto por Twiddle Factors
+    \item<6-> Unidad de escalamiento (redondeo/truncamiento) configurable en ejecución
+  \end{itemize} 
+  \item<7-> Frecuencia de muestreo por encima de la frecuencia mínima 
+  \begin{itemize}
+    \Fontitit
+    \item<8-> Radix-2: clock: 107 MHz -> 8.23 Msamples/sec.
+    \item<9-> Radix-4: clock:  81 MHz -> 11.57 Msamples/sec.
+  \end{itemize}
+  \item<10-> Se cumplió el requerimiento de baja demanda de recursos/espacio.
+  \item<11-> Las arqiutecturas fueron implementadas en Verilog HDL.
+  \item<12-> Se generaron además herramientas de testing en Verilog, C++ y Matlab scriptng.       
+\end{itemize}
+
+\end{frame}
+
+\subsection{Trabajos futuros}
+\begin{frame}{Trabajos Futuros}
+  \Fontit
+  \begin{itemize}
+	%\only<1-3>{
+	\item<1-> Estudiar posibles implementaciones de algoritmos de \textit{dithering} para
+	reducir el ruido generado en las arquitecturas.
+	\item<2-> Modificar el módulo de rotación Cordic agregando un pipeline que permita aumentar la
+	velocidad de \textit{clock} de las arquitecturas, sin agregar ciclos de \textit{clock} extra al
+	cómputo total de la FFT.
+	%}
+ \end{itemize}
+\end{frame}
+
+\begin{frame}
+%\frametitle{A first slide}
+
+\begin{center}
+\Huge PREGUNTAS?
+\end{center}
+
+\end{frame}
+
+\begin{frame}
+%\frametitle{A first slide}
+
+\begin{center}
+\Huge MUCHAS GRACIAS!
+\end{center}
+
+\end{frame}
+
+\begin{frame}
+%\frametitle{A first slide}
+
+\begin{center}
+\Huge FIN!
+\end{center}
+
+\end{frame}
+
+\end{document}

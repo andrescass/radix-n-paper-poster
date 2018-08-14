@@ -1,0 +1,219 @@
+\section{Introducción}
+
+\begin{frame}{OFDM}
+  \begin{columns}[T]
+    \begin{column}{.3\textwidth}
+      \begin{itemize}
+        \item Orthogonal Frequency Divider Multiplexing
+        \item<2-> Divide la información en múltiples frecuencias
+        \item<3-> Bandas de frecuencia solapadas
+      \end{itemize}
+    \end{column}
+    
+    \begin{column}{.7\textwidth}
+      \uncover<2->{
+        \alt<2>{
+          \begin{center}
+            \includegraphics[scale=0.17]{./figures/freq_mux.png}
+          \end{center}
+        }{
+        %\uncover<4->{
+          \begin{center}
+            \includegraphics[scale=0.17]{./figures/freq_ort.png}
+          \end{center}
+        }
+      }
+    \end{column}
+  \end{columns}
+  
+  \begin{itemize}
+    \item<4-> Representación matemática
+  \end{itemize}
+  \uncover<4->{
+	  \begin{equation}
+		s_{k}(t-kT) =
+		%	\begin{cases}
+			\sum\limits_{i=-N/2}^{N/2-1} x_{i,k} e^{j2\pi
+			\left(\frac{i}{T}\right)(t-kT)}
+		%	\end{cases}
+		\end{equation}
+	}
+	
+  \begin{itemize}
+    \item<5-> Asumiendo que $x_{i,k}$ es constante a lo largo del per\'iodo de s\'imbolo $T$, se puede utilizar una IDFT\slash DFT para modular.
+  \end{itemize}
+  
+%   \begin{columns}[T]
+%     \begin{column}{.5\textwidth}
+%       \uncover<6->{
+%         \begin{center}
+%           \advance\leftskip-0.2cm
+%           \includegraphics[scale=0.26]{./figures/hard_mod.png}
+%         \end{center}
+%       }
+%     \end{column}
+%     
+%     \begin{column}{.5\textwidth}
+%       \uncover<8->{
+%         \begin{center}
+%           \advance\leftskip-0.2cm
+%           \includegraphics[scale=0.26]{./figures/soft_mod.png}
+%         \end{center}
+%       }
+%     \end{column}
+%   \end{columns}
+	
+  
+ 
+\end{frame}
+
+\begin{frame}{FFT}
+  \Fontit
+  \begin{itemize}
+    \item<1-> Transformada rápida de Fourier
+    \item<2-> Sumas/restas y multiplicaciones
+    \item<3-> Cada salida = suma y resta de todas las entradas
+  \end{itemize}
+
+  \vfill
+
+  \uncover<3->{
+    \begin{center}
+      \advance\leftskip-0.2cm
+      \includegraphics[scale=0.30]{./figures/soft_mod.png}
+    \end{center}
+  }
+
+\end{frame}
+% 
+% \begin{frame}{FPGA}
+% 
+% \begin{columns}[T]
+%   \begin{column}{.2\textwidth}
+%       \uncover<2->{
+%         \alt<2>{
+%         \begin{center}
+%           \advance\leftskip-0.2cm
+%           \includegraphics[scale=0.20]{./figures/circ_good.png}
+%         \end{center}
+%         }{
+%         \begin{center}
+%           \advance\leftskip-0.2cm
+%           \includegraphics[scale=0.20]{./figures/circ_bad.png}
+%         \end{center}
+%         }
+%       }
+%     \end{column}
+%     \begin{column}{.2\textwidth}
+%       \uncover<4->{
+%         \begin{center}
+%           \advance\leftskip-0.2cm
+%           \includegraphics[scale=0.13]{./figures/flecha.png}
+%         \end{center}
+%        }
+%     \end{column}
+%     
+%     \begin{column}{.2\textwidth}
+%       \uncover<5->{
+%         \alt<5>{
+%         \begin{center}
+%           \advance\leftskip-0.2cm
+%           \includegraphics[scale=0.20]{./figures/circ_good.png}
+%         \end{center}
+%         }{
+%         \begin{center}
+%           \advance\leftskip-0.2cm
+%           \includegraphics[scale=0.20]{./figures/circ_bad.png}
+%         \end{center}
+%         }
+%       }
+%     \end{column}
+%     \begin{column}{.2\textwidth}
+%       \uncover<6->{
+%         \begin{center}
+%           \advance\leftskip-0.2cm
+%           \includegraphics[scale=0.13]{./figures/flecha.png}
+%         \end{center}
+%        }
+%     \end{column}
+%     
+%     \begin{column}{.2\textwidth}
+%       \uncover<7->{
+% %         \alt<7>{
+%         \begin{center}
+%           \advance\leftskip-0.2cm
+%           \includegraphics[scale=0.20]{./figures/circ_good.png}
+%         \end{center}
+% %         }{
+% %         \begin{center}
+% %           \advance\leftskip-0.2cm
+% %           \includegraphics[scale=0.20]{./figures/circ_tick.png}
+% %         \end{center}
+% %         }
+%       }
+%     \end{column}
+%     
+%     
+%     
+%   \end{columns}
+%   
+%   \vfill
+%   
+%   \uncover<8->{
+% 	  \begin{center}
+% 		  \advance\leftskip-0.2cm
+% 		  \includegraphics[scale=0.26]{./figures/fpga_design.png}
+% 	  \end{center}
+%   }
+% 
+% \end{frame}
+% 
+% \begin{frame}
+% 	\begin{center}
+% 	\Huge MOTIVACIÃ“N Y OBJETIVOS
+% 	\end{center}
+% \end{frame}
+% 
+% \subsection{Motivacion}
+% 
+% \begin{frame}{MotivaciÃ³n}
+%   \Fontit
+%   \begin{itemize}
+%     \item<1-> El avance de los sistemas de radio definidos por software
+%     \item<2-> La flexibilidad que brindan las FPGAs para implementar sistemas complejos
+%     \item<3-> La necesidad de sistemas de comunicaciones de cÃ³digo libre, eficientes y econÃ³micos
+%     \item<4-> Aportar al desarrollo de un sistema de telecomunicaciones dentro del LSE
+%     de la facultad
+%   \end{itemize}
+% \end{frame}
+% 
+\subsection{Objetivos}
+\begin{frame}{Objetivos}
+  \Fontit
+  \begin{itemize}
+    \item<1-> Diseñar un modulador/demodulador OFDM para un sistema de telecomunicaciones definido por
+    software que cumpla con el estandard ISDB-T.
+    \item<2-> Que sirva también como unidad de cómputo FFT/IFFT para procesamiento de señales. 
+    \item<3-> Requerimientos
+    \only<4-9>{
+      \begin{itemize}
+          \Fontitit
+		  \item<4-9> Longitud configurable, incluyendo al menos 2K, 4K y 8K muestras (ISDB-T).
+		  \item<5-9> Frecuencia de muestreo mínima de $8,126,984$ muestras garantizada (ISDB-T).
+		  \item<6-9> Entrada y salida continua.
+		  \item<7-9> Aritmética de punto fijo.
+		  \item<8-9> Unidad de escalamiento configurable en ejecución con opción de seleccionar la etapa a escalar y el método (redondeo/truncamiento).
+		  \item<9-9> Menor consumo de espacio/recursos que otras implementaciones (ref: Xilinx IP FFT 7.0 y un core FFT abierto diseñado para modulación OFDM ISDB-T).
+	  \end{itemize}}
+    \item<10-> Realizar una evaluación de desempeño
+    \only<11-14>{\begin{itemize}
+      \Fontitit
+      \item<11-14> Funcionamiento
+      \item<12-14> Ruido / error
+      \item<13-14> Distorsión armónica
+      \item<14-14> Recursos
+    \end{itemize}}
+    \item<15-> Realizar una comparativa con desarrollos de terceros para evaluar el diseño realizado
+    \item<16-> Proponer trabajos futuros para continuar y mejorar el diseño.
+ \end{itemize}
+\end{frame}

@@ -1,0 +1,454 @@
+\section{CaracterizaciÛn y tests}
+
+\begin{frame}
+\begin{center}
+\Huge CARACTERIZACI”N Y PRUEBAS
+\end{center}
+\end{frame}
+
+\begin{frame}{Listado de pruebas}
+  \begin{itemize}
+	\item<1-> TransformaciÛn de seÒales patrÛn
+	\item<2-> MediciÛn del error
+	\item<3-> MediciÛn de la THD
+	\item<4-> Efecto del escalamiento
+	\item<5-> MediciÛn de los recursos necesarios 
+    \item<6-> ComparaciÛn con core FFT abierto para modulaciÛn OFDM/ISDB-T
+  \end{itemize}
+\end{frame}
+
+\subsection{SeÒales PatrÛn}
+
+\begin{frame}{SeÒales patrÛn}
+  \uncover<1->{
+  \begin{itemize}
+    \item<1-> Se realizaron pruebas utilizando como entrada deltas en diferentes compoenentes y se
+    analizÛ su salida. Por ejemplo:
+    \begin{itemize}
+      \item<2-> Una delta en posiciÛn `0'
+      \item<3-> Una delta en posiciÛn `6'
+    \end{itemize}
+  \end{itemize}
+  }
+  \uncover<2->{
+    \alt<2>{
+      \begin{center}
+        \advance\leftskip-0.2cm
+        \includegraphics[scale=0.3]{./figures/r2_delta0_16_4096_mul.png}
+      \end{center}
+    }{
+      \begin{center}
+        \advance\leftskip-0.2cm
+        \includegraphics[scale=0.3]{./figures/r2_delta7_16_4096_mul.png}
+      \end{center}
+    }
+  }
+\end{frame}
+
+\subsection{MediciÛn del error}
+\begin{frame}{}%{M√©tricas de error}
+%   \only<1-8>{
+%   \begin{itemize}
+%     \item<1-> Las m√©tricas utilizadas para estimar el error fueron
+%     \begin{itemize}
+%       \item<2-> $E_\infty = MAX\left(\frac{ X_o[n] - X_{dut}[n]}{X_o[n]}\right)$
+%       \item<3-> $E_2 = \left\Vert\frac{X_o[n] - X_{dut}[n]}{X_o[n]}\right\Vert_2$
+%     \end{itemize}
+%     \item<4-> Dado que el sistema es no lineal se realizaron 1024 simulaciones
+%     \begin{itemize}
+%       \item<5-> Se cre√≥ una entrada aleatoria para cada simulaci√≥n
+%       \item<6-> Se calcul√≥ el error en cada simulaci√≥n y luego se promedi√≥
+%       \item<7-> Se realiz√≥ para cada arquitectura
+%       \item<8-> Se utiliz√≥ el c√°lculo de FFT de la se√±al de entrada en Matlab como referencia para
+%       el c√°lculo de error
+%     \end{itemize}
+%     \item<9-> Se contrast√≥ con el error de una arquitectura de c√≥mputo de FFT de terceros: KISS
+%       FFT en C++
+%   \end{itemize}
+%   }
+  
+%  \only<9>{
+    \begin{columns}[T]
+      \begin{column}{.44\textwidth}
+        \begin{center}
+          \advance\leftskip-0.2cm
+          \includegraphics[scale=0.3]{./figures/error_sim.png}
+        \end{center}
+      \end{column}
+      
+      \begin{column}{.56\textwidth}
+        \begin{center}
+          \advance\leftskip-0.2cm
+          \includegraphics[scale=0.3]{./figures/norm1_1024_12.png}
+        \end{center}
+        
+        \begin{center}
+          \advance\leftskip-0.2cm
+          \includegraphics[scale=0.3]{./figures/norm1_r2_16_4096_mul.png}
+          %\includegraphics[scale=0.2]{./figures/norm2_1024_12.png}
+        \end{center}
+        
+%         \begin{center}
+%           \advance\leftskip-0.2cm
+%           \includegraphics[scale=0.3]{./figures/norm2_1024_12.png}
+%         \end{center}
+      \end{column}
+    \end{columns}
+%    }
+\end{frame}
+
+\begin{frame}{Resultados de la mediciÛn de error}
+
+  \begin{columns}[T]
+    \begin{column}{.2\textwidth}
+
+    \end{column}
+    \begin{column}{.8\textwidth}
+	\begin{tabular}{l c c c c}
+		& \textbf{1024, 12} & \textbf{1024, 16} & \textbf{4096, 12} & \textbf{4096, 16}\\ \hline 
+		\textbf{R-2, cordic} & $0.092$ & $0.006$ & $0.099$ & $0.008 $\\
+		\textbf{R-2, Mult.} & $0.232$ & $0.003$ & $0.340$ & $0.108$\\
+		\textbf{R-4, cordic} & $0.077$ & $0.003$ & $0.074$ & $0.007$\\
+		\textbf{R-4, Mult.} & $0.224$ & $0.002$ & $0.334$ & $0.105$\\
+		\textbf{Kiss FFT} & $ $ & $0.017$ & $ $ & $0.035$\\
+		\textbf{Xilinx FFT v7.1} & $0.0007$ & $0.0001$ & $0.0008$ & $0.0004$\\ \hline
+	\end{tabular}\\
+	\end{column}
+	
+	\begin{column}{.2\textwidth}
+	
+	\end{column}
+
+  \end{columns}
+	
+% 	Resultados para $E_2$
+% 	\begin{tabular}{l c c c c }
+% 		 & \textbf{1024, 12} & \textbf{1024, 16} & \textbf{4096, 12} & \textbf{4096, 16}\\ \hline 
+% 		\textbf{R-2, cordic} & $0.095$ & $0.007$ & $0.116$ & $0.053$\\
+% 		\textbf{R-2, Mult.} & $0.257$ & $0.004$ & $0.356$ & $0.131$\\
+% 		\textbf{R-4, cordic} & $0.084$ & $0.002$ & $0.094$ & $0.027$\\
+% 		\textbf{R-4, Mult.} & $0.258$ & $0.003$ & $0.358$ & $0.126$\\ 
+% 		\textbf{Kiss FFT} & $ $ & $0.017$ & $ $ & $0.035$\\\hline
+% 	\end{tabular}
+
+\end{frame}
+
+\subsection{MediciÛn de la THD}
+\begin{frame}{MediciÛn de la THD}
+%   \only<1-5>{
+%   \begin{itemize}
+%     \item<1-> Las arquitecturas se comportan como sistemas no lineales
+%     \item<2-> Para medir completamente la THD no alcanza con medir para algunas frecuencias
+%     \item<3-> Se midi√≥ la THD para entradas delta en cada una de las componentes para cada
+%     arquitectura
+%     \item<4-> Se tom√≥ la salida de cada simulaci√≥n y se calcul√≥ la THD mediante Matlab.
+%     \item<5-> Se contrast√≥ con la THD de la arquitectura Kiss FFT en C++.
+%   \end{itemize}
+%   }
+  
+%  \only<6>{
+    \begin{center}
+      \advance\leftskip-0.2cm
+      \includegraphics[scale=0.27]{./figures/thd_sim.png}
+    \end{center}
+%  }  
+\end{frame}
+
+\begin{frame}{THD - Resultados}
+  \begin{columns}[T]
+    \begin{column}{.5\textwidth}
+      %\only<1-1>{
+        \begin{center}
+	      %\advance\leftskip-0.2cm
+	      \includegraphics[scale=0.17]{./figures/thd_r2_4096_16_cor.png}\\
+          Radix-2, Cordic, 16 bits
+        \end{center}
+       % }
+	    
+	    
+	    \begin{center}
+	      %\advance\leftskip-0.2cm
+	      \includegraphics[scale=0.17]{./figures/thd_r4_1024_16_mul.png}\\
+	      Radix-4, Mult., 16 bits
+	    \end{center}
+	    
+	  %\only<2-2>{  
+% 	    \begin{center}
+% 	      %\advance\leftskip-0.2cm
+% 	      \includegraphics[scale=0.15]{./figures/thd_kiss_4096_16.png}\\
+% 	      Kiss FFT. C++. 16 bits
+% 	    \end{center}
+	  %}
+	    
+    \end{column}
+    
+    \begin{column}{.5\textwidth}
+%       \only<1-1>{
+%         \begin{center}
+% 	      %\advance\leftskip-0.2cm
+% 	      \includegraphics[scale=0.15]{./figures/thd_r2_4096_16_mul.png}\\
+% 	      Radix-2, Mult., 16 bits
+% 	    \end{center}
+% 	    }
+	    
+	    
+	    \begin{center}
+	      %\advance\leftskip-0.2cm
+% 	      \includegraphics[scale=0.15]{./figures/thd_r4_1024_16_mul.png}\\
+% 	      Radix-4, Mult., 16 bits
+	       \includegraphics[scale=0.17]{./figures/thd_kiss_4096_16.png}\\
+	      Kiss FFT. C++. 16 bits
+	    \end{center}
+	    
+%	  \only<2-2>{  
+	    \begin{center}
+	      %\advance\leftskip-0.2cm
+	      \includegraphics[scale=0.17]{./figures/thd_xilinx_r4_16_1024.png}\\
+	      Xilinx LogiCORE FFT 7.1
+	      %Matlab. Punto flotante 64 bits
+	    \end{center}
+%	  }
+	    
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% \begin{frame}{An√°lisis de la intermodulaci√≥n}
+% %   \begin{itemize}
+% %     \item<1-> Se midi√≥ la THD para un tono determinado
+% %     \item<2-> Se midi√≥ la THD para una se√±al que contiene el mismo tono y el tono inmediato
+% %     anterior, y se compar√≥ con la THD anterior
+% %   \end{itemize}
+% %   \uncover<3-4>{
+% %   \begin{columns}[T]
+% %     \begin{column}{.5\textwidth}
+% % \begin{itemize}
+% %   \item<1-> Se√±al que produce overflow 
+%       \begin{center}
+%         \advance\leftskip-0.2cm
+% 	    \includegraphics[scale=0.22]{./figures/thd_r2_4096_16_cor_450_451.png}\\
+% 	    Rotador Cordic.
+% 	  \end{center}
+% % 	\end{column}
+% 	
+% % 	\begin{column}{.5\textwidth}
+% %   \item<2-> Se√±al con produce overflow
+% 	  \begin{center}
+% 	    \advance\leftskip-0.2cm
+% 	    \includegraphics[scale=0.22]{./figures/thd_r2_4096_16_mul_450_451.png}\\
+% 	    Multiplicador complejo.
+% 	  \end{center}
+% % 	\end{column}
+% %   \end{columns}
+% %   }
+% %   \begin{itemize}
+% %     \item<4-4> Se observa que no hay efectos de intermodulaci√≥n 
+% %   \end{itemize}
+% \end{frame}
+
+% \subsection{Efecto del escalamiento}
+% 
+% \begin{frame}{}
+%   \begin{itemize}
+%     \item<1-> Ensayos de verificaci√≥n
+%     \begin{itemize}
+%       \Fontitit
+%       \item<1-> Transformaci√≥n de se√±ales patr√≥n
+%     \end{itemize}
+%     \item<1-> Ensayos de caracterizaci√≥n
+%     \begin{itemize}
+%       \Fontitit
+%       \item<1-> Medici√≥n del error
+%       \item<1-> Medici√≥n de la THD
+%       \item<1-> \color<1->[rgb]{0,0.6,0}Efecto del escalamiento
+%       \item<1-> Medici√≥n de los recursos necesarios 
+%     \end{itemize}
+%     \item<1-> Ensayos de validaci√≥n
+%     \begin{itemize}
+%       \Fontitit
+%       \item<1-> Implementaci√≥n en FPGA
+%     \end{itemize}
+%   \end{itemize}
+% \end{frame}
+% 
+% \begin{frame}{Efecto sobre la se√±al de salida}
+%   \begin{itemize}
+%     \item<1-> Provoca un escalamiento por $1/2$ por cada etapa donde se realiza escalamiento
+%     \item<2-> Provoca una p√©rdida de informaci√≥n
+%   \end{itemize}
+%   
+%   \uncover<3-3>{
+%     \begin{center}
+%       \advance\leftskip-0.2cm
+%       \includegraphics[scale=0.32]{./figures/rand_r2_16_4096_mul_trunc_2.png}\\
+%     \end{center}
+%     }
+% \end{frame}
+% 
+% \begin{frame}{Utilidad en caso de overflow}
+%   \begin{itemize}
+% %     \item<1-> Se utilizaron dos se√±ales compuestas por una delta en una componente
+% %     \item<2-> Una dentro del rango de funcionamiento seguro y una que provoca overflow
+% %     \item<3-> Se simul√≥ con escalamiento en cada etapa y se midi√≥ la THD en cada caso
+% %   \end{itemize}
+% %   
+% %   \uncover<4-4>{
+% %   \begin{columns}[T]
+% %     \begin{column}{.5\textwidth}
+%      \item<1-> Se√±al sin producir overflow
+% 	  \begin{center}
+% 		  \advance\leftskip-0.2cm
+% 		  \includegraphics[scale=0.21]{./figures/r2_16_4096_mul_scale_thd_red.png}
+% 		\end{center}
+% %     \end{column}
+% %     \begin{column}{.5\textwidth}
+%       \item<2-> Se√±al que provoca overflow
+% 		\begin{center}
+% 		  \advance\leftskip-0.2cm
+% 		  \includegraphics[scale=0.21]{./figures/r2_16_4096_mul_scale_thd_05_red.png}
+% 		\end{center}
+%     \end{itemize}
+% % 	\end{column}
+% %   \end{columns}
+% %   }
+% \end{frame}
+
+\subsection{Recursos de ImplementaciÛn}
+\begin{frame}{Recursos de implementaciÛn}
+    \begin{columns}[T]
+      \begin{column}{.53\textwidth}
+      \begin{itemize}
+        \item<1-> Uno de los requerimientos es la economÌa de recursos
+        \item<2-> FPGA XC5VLX110, de la familia Virtex-5 de Xilinx.
+        \item<3-> Se comparÛ con dos arquitecturas
+        \begin{itemize}
+          \item<4-> Radix-2 desenrrollada
+          \item<5-> Xilinx LogiCORE FFT 7.1
+        \end{itemize}
+      \end{itemize}
+      \end{column}
+      \begin{column}{.47\textwidth}
+        \centering
+        \begin{center}
+		  \advance\leftskip-0.2cm
+		  \includegraphics[scale=0.32]{./figures/virtex_chip.jpg}
+		\end{center}
+      \end{column}
+    \end{columns}
+%   \end{itemize}
+\end{frame}
+
+\begin{frame}{Resultados para 1024 puntos}
+%  \uncover<3-3>{
+%   \begin{columns}[T]
+%     \begin{column}{.5\textwidth}
+
+	  \begin{center}
+		  %\advance\leftskip-0.2cm
+		  \includegraphics[scale=0.72]{./figures/sizecomp1024.png}\\
+		  
+		\end{center}
+%     \end{column}
+\end{frame}
+
+\begin{frame}{Resultados para 4096 puntos}
+%     \begin{column}{.5\textwidth}
+		\begin{center}
+		  %\advance\leftskip-0.2cm
+		  \includegraphics[scale=0.72]{./figures/sizecomp4096.png}\\
+		\end{center}
+% 	\end{column}
+%   \end{columns}
+%   }
+\end{frame}
+
+% \subsection{ImplementaciÛn en hardware}
+% 
+% \begin{frame}{}%{Listado de pruebas}
+%   \Fontit
+%   \begin{itemize}
+%     \item<1-> Ensayos de verificaci√≥n
+%     \begin{itemize}
+%       \Fontitit
+%       \item<1-> Transformaci√≥n de se√±ales patr√≥n
+%     \end{itemize}
+%     \item<1-> Ensayos de caracterizaci√≥n
+%     \begin{itemize}
+%       \Fontitit
+%       \item<1-> Medici√≥n del error
+%       \item<1-> Medici√≥n de la THD
+%       \item<1-> Efecto del escalamiento
+%       \item<1-> Medici√≥n de los recursos necesarios 
+%     \end{itemize}
+%     \item<1-> Ensayos de validaci√≥n
+%     \begin{itemize}
+%       \Fontitit
+%       \item<1-> \color<1->[rgb]{0,0.6,0}Implementaci√≥n en FPGA
+%     \end{itemize}
+%   \end{itemize}
+% \end{frame}
+% 
+% \begin{frame}{Validaci√≥n en hardware}
+%   \only<1-2,4-5>{
+%     
+%       \begin{columns}[T]
+%         \begin{column}{.5\textwidth}
+%           \begin{itemize}
+%             \item<1-> Se un placa de desarrollo Avnet, con una FPGA XC5VLX110
+%             \item<2-> Se implement√≥ adicionalmente una unidad de comuniaci√≥n UART y una memoria
+%        auxiliar.
+%           \end{itemize}
+%         \end{column}
+%         \begin{column}{.5\textwidth}
+%           \centering
+%           \begin{center}
+% 		    \advance\leftskip-0.2cm
+% 		    \includegraphics[scale=0.48]{./figures/virtex_board.jpg}
+% 		  \end{center}
+%         \end{column}
+%       \end{columns}
+%       \begin{itemize}
+%         \item<4-> Se utilizaron como entrada las se√±ales patr√≥n ya utilizadas previamente, y se√±ales
+%         aleatorias para las que se calcul√≥ el error.
+%         \item<5-> Los resultados de las corridas fueron similares al obtenido previamente en las
+%         simulaciones
+%       \end{itemize}
+%   }
+%   
+%   \only<3-3>{
+%     \begin{center}
+% 	  \advance\leftskip-0.2cm
+% 	  \includegraphics[scale=0.38]{./figures/hw_tb.png}\\
+% 	\end{center}
+%   }
+% \end{frame}
+
+\subsection{ComparaciÛn con IP Core FFT abierto}
+\begin{frame}{ComparaciÛn con IP Core FFT abierto}
+	\begin{itemize}
+	  \item<1-> IP Core abierto para modulaciÛn/demodulaciÛn OFDM para ISDB-T (Melo, R., Salom\'on, F., Valinoti, B., (2016) ``IP core FFT configurable en Runtime'')
+	  \item<2-> ComparaciÛn con la versiÛn b·sica del IP Core, 8K muestras, 16 bits 
+	\end{itemize}
+	
+	\begin{columns}[T]
+    \begin{column}{.2\textwidth}
+
+    \end{column}
+    \begin{column}{.8\textwidth}
+		\uncover<3->{
+			\begin{tabular}{l c c }
+			 & \textbf{Iterative radix-2} & \textbf{Reference core}\\ \hline 
+			\textbf{FF} & $533$ & $1334$\\
+			\textbf{LUT} & $3046$ & $4133$\\
+			\textbf{BRAM} & $62$ & $62$\\
+			\textbf{MUL} & $ $ & $48$\\ 
+			\textbf{MHz} & $107$ & $61$\\ \hline
+			\end{tabular}
+		}
+	\end{column}
+	\begin{column}{.2\textwidth}
+
+    \end{column}
+    \end{columns}
+
+\end{frame}

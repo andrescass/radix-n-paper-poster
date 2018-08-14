@@ -1,0 +1,166 @@
+\documentclass{beamer}
+%
+% Choose how your presentation looks.
+%
+% For more themes, color themes and font themes, see:
+% http://deic.uab.es/~iblanes/beamer_gallery/index_by_theme.html
+%
+
+\definecolor{sidegray}{RGB}{77,128,137}
+\definecolor{headgray}{RGB}{72,72,72}
+\definecolor{logogray}{RGB}{78,78,78}
+
+\mode<presentation>
+{
+  \usetheme[hideothersubsections]{PaloAlto} %PaloAlto     % or try Darmstadt, Madrid, Warsaw, ...
+  \usecolortheme{dolphin} % dolphin or try albatross, beaver, crane, ...
+  \usefonttheme{serif}  % or try serif, structurebold, ...
+  %\setbeamertemplate{navigation symbols}{}
+  \setbeamertemplate{caption}[numbered]
+  \setbeamercolor{sidebar}{bg=sidegray!90!black}
+  \setbeamercolor{frametitle}{bg=sidegray!90!black}
+  \setbeamercolor{logo}{bg=sidegray!50!black} 
+  %\setbeamercolor{background canvas}{bg=violet}
+  %\setbeamertemplate{sidebar left}[]
+} 
+
+
+
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{tikz}
+
+\title[Tesis de Grado de Ingeniería Electrónica]{Análisis e Implementación de algoritmos FFT para
+transmisiones OFDM}
+\author[Andres Dario Cassagnes]{\textit{Alumno:} Sr. Andrés Dario Cassagnes\\
+\small{\textit{Director:} Dr. Ing. Ariel Lutenberg}\\
+\small{\textit{Codirector:} Ing. Federico Giordano Zacchigna}}
+\institute{Laboratorio de Sistemas Embebidos\\ Facultad de Ingeniría\\ Universidad de Buenos Aires}
+\date{15/12/2016}
+%\logo{\includegraphics[scale=0.10]{./figures/logoFIUBA.png}}
+
+% \makeatletter
+% %\setbeamertemplate{sidebar canvas left}{}
+% \setbeamertemplate{sidebar left}[sidebar theme]{%
+%     \vspace*{3.5cm}
+%     \vspace*{\fill}
+%     %\includegraphics[width=1.25cm]{ire_logo.png}\\
+%     %\includegraphics[width=1.25cm]{weiti_logo.png}\\
+%     %\includegraphics[width=1.25cm]{pw_logo.png}
+%     \vspace*{0.1cm}
+%     \vfill
+% 
+% }
+% \makeatother
+
+\makeatletter
+%\beamer@sidebarwidth=5 \baselineskip     %controls the height of the headline, default is 2.5
+\beamer@headheight=1.5\baselineskip     %controls the height of the headline, default is 2.5 
+%\setlength\beamer@sidebarwidth{2cm}   
+\makeatother
+
+\hyphenation{Im-ple-men-ta-cion}
+
+\begin{document}
+
+\begin{frame}
+% \tikz [remember picture,overlay]
+%     \node at
+%         ([yshift=1.5cm]current page.south)
+%         ([xshift=1cm]current page.south) 
+%         %or: (current page.center)
+%         {\includegraphics[scale=0.10]{./figures/logoFIUBA.png}};
+  \titlepage
+\end{frame}
+
+% Uncomment these lines for an automatically generated outline.
+%\begin{frame}{Outline}
+%  \tableofcontents
+%\end{frame}
+
+\include{chapters/chapter_1}
+\include{chapters/chapter_2}
+\include{chapters/chapter_3}
+\include{chapters/chapter_4}
+
+\section{Conclusiones y trabajos futuros}
+
+\begin{frame}
+\begin{center}
+\Huge CONCLUSIONES Y TRABAJOS FUTUROS
+\end{center}
+\end{frame}
+
+\subsection{Conclusiones}
+\begin{frame}{Conclusiones}
+
+\begin{itemize}
+%   \item<1-> Se diseñaron e implementaron dos arquitecturas para el cómputo de la FFT
+  \item<1-> Las arquitecturas implementadas cumplen con el requerimiento de la economía de recursos
+%   \item<3-> Se desarrollaron dos módulos para el producto por los twiddle factors
+  \item<2-> Se realizaron ensayos de verificación y caracterización
+  \begin{itemize}
+    \item<3-> Error dentro de los parámetros aceptables
+    \item<4-> Baja distorsión
+    \item<5-> Muy baja demanda de recursos
+  \end{itemize} 
+  \item<6-> Del resultado de los ensayos se concluye 
+  \begin{itemize}
+    \item<7-> Se cumplió con los requerimientos de desempeño
+    \item<8-> Se cumplió con los requerimientos de flexibilidad y escalabilidad
+  \end{itemize}
+  \item<9-> Las arquitecturas son aptas para su utilización en la modulación de un sistema OFDM       
+\end{itemize}
+
+\end{frame}
+
+\subsection{Trabajos futuros}
+\begin{frame}{Trabajos Futuros}
+  \begin{itemize}
+	\only<1-3>{
+	\item<1-> Estudiar posibles implementaciones de algoritmos de \textit{dithering} para
+	reducir el ruido generado en las arquitecturas.
+	\item<2-> Modificar el módulo de rotación Cordic agregando un pipeline que permita aumentar la
+	velocidad de \textit{clock} de las arquitecturas, sin agregar ciclos de \textit{clock} extra al
+	cómputo total de la FFT.
+	\item<3-> Modificar el multiplicador complejo agrandando el tamaño de palabra de los factores de
+	multiplicación de los \textit{twiddle factors} y/o optimizarlo para la utilización de los bloques
+	de procesamiento digital de los dispositivos FPGA.
+	}
+	\only<4-5>{
+	\item<4-> Modificar el hardware para que el tamaño de palabra del ángulo de rotación sea
+	independiente del tamaño de palabra de las señales.
+	\item<5-> Estudiar la posibilidad de modificar las arquitecturas de forma de poder modificar la
+	cantidad de puntos de la FFT en forma dinámica.
+	}
+ \end{itemize}
+\end{frame}
+
+\begin{frame}
+%\frametitle{A first slide}
+
+\begin{center}
+\Huge ¿PREGUNTAS?
+\end{center}
+
+\end{frame}
+
+\begin{frame}
+%\frametitle{A first slide}
+
+\begin{center}
+\Huge MUCHAS GRACIAS!
+\end{center}
+
+\end{frame}
+
+\begin{frame}
+%\frametitle{A first slide}
+
+\begin{center}
+\Huge FIN!
+\end{center}
+
+\end{frame}
+
+\end{document}
