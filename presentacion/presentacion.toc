@@ -3,14 +3,13 @@
 \beamer@subsectionintoc {1}{1}{Objetivos}{10}{0}{1}
 \beamer@sectionintoc {2}{Selección de las arquitecturas}{26}{0}{2}
 \beamer@subsectionintoc {2}{1}{Transformada de Fourier}{27}{0}{2}
-\beamer@sectionintoc {3}{Implementación}{44}{0}{3}
-\beamer@subsectionintoc {3}{1}{Arquitecturas radix}{45}{0}{3}
-\beamer@sectionintoc {4}{Caracterización y tests}{59}{0}{4}
-\beamer@subsectionintoc {4}{1}{Señales Patrón}{66}{0}{4}
-\beamer@subsectionintoc {4}{2}{Medición del error}{69}{0}{4}
-\beamer@subsectionintoc {4}{3}{Medición de la THD}{71}{0}{4}
-\beamer@subsectionintoc {4}{4}{Recursos de Implementación}{73}{0}{4}
-\beamer@subsectionintoc {4}{5}{Comparación con IP Core FFT abierto}{80}{0}{4}
-\beamer@sectionintoc {5}{Conclusiones y trabajos futuros}{83}{0}{5}
-\beamer@subsectionintoc {5}{1}{Conclusiones}{84}{0}{5}
-\beamer@subsectionintoc {5}{2}{Trabajos futuros}{96}{0}{5}
+\beamer@sectionintoc {3}{Implementación}{38}{0}{3}
+\beamer@subsectionintoc {3}{1}{Arquitecturas radix}{39}{0}{3}
+\beamer@sectionintoc {4}{Caracterización y tests}{49}{0}{4}
+\beamer@subsectionintoc {4}{1}{Medición del error}{56}{0}{4}
+\beamer@subsectionintoc {4}{2}{Medición de la THD}{58}{0}{4}
+\beamer@subsectionintoc {4}{3}{Recursos de Implementación}{59}{0}{4}
+\beamer@subsectionintoc {4}{4}{Comparación con IP Core FFT abierto}{61}{0}{4}
+\beamer@sectionintoc {5}{Conclusiones y trabajos futuros}{64}{0}{5}
+\beamer@subsectionintoc {5}{1}{Conclusiones}{65}{0}{5}
+\beamer@subsectionintoc {5}{2}{Trabajos futuros}{77}{0}{5}

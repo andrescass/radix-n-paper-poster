@@ -3,13 +3,12 @@
 \BOOKMARK [2][]{Outline0.2}{Selección de las arquitecturas}{}% 3
 \BOOKMARK [3][]{Outline0.2.1.27}{Transformada de Fourier}{Outline0.2}% 4
 \BOOKMARK [2][]{Outline0.3}{Implementación}{}% 5
-\BOOKMARK [3][]{Outline0.3.1.45}{Arquitecturas radix}{Outline0.3}% 6
+\BOOKMARK [3][]{Outline0.3.1.39}{Arquitecturas radix}{Outline0.3}% 6
 \BOOKMARK [2][]{Outline0.4}{Caracterización y tests}{}% 7
-\BOOKMARK [3][]{Outline0.4.1.66}{Señales Patrón}{Outline0.4}% 8
-\BOOKMARK [3][]{Outline0.4.2.69}{Medición del error}{Outline0.4}% 9
-\BOOKMARK [3][]{Outline0.4.3.71}{Medición de la THD}{Outline0.4}% 10
-\BOOKMARK [3][]{Outline0.4.4.73}{Recursos de Implementación}{Outline0.4}% 11
-\BOOKMARK [3][]{Outline0.4.5.80}{Comparación con IP Core FFT abierto}{Outline0.4}% 12
-\BOOKMARK [2][]{Outline0.5}{Conclusiones y trabajos futuros}{}% 13
-\BOOKMARK [3][]{Outline0.5.1.84}{Conclusiones}{Outline0.5}% 14
-\BOOKMARK [3][]{Outline0.5.2.96}{Trabajos futuros}{Outline0.5}% 15
+\BOOKMARK [3][]{Outline0.4.1.56}{Medición del error}{Outline0.4}% 8
+\BOOKMARK [3][]{Outline0.4.2.58}{Medición de la THD}{Outline0.4}% 9
+\BOOKMARK [3][]{Outline0.4.3.59}{Recursos de Implementación}{Outline0.4}% 10
+\BOOKMARK [3][]{Outline0.4.4.61}{Comparación con IP Core FFT abierto}{Outline0.4}% 11
+\BOOKMARK [2][]{Outline0.5}{Conclusiones y trabajos futuros}{}% 12
+\BOOKMARK [3][]{Outline0.5.1.65}{Conclusiones}{Outline0.5}% 13
+\BOOKMARK [3][]{Outline0.5.2.77}{Trabajos futuros}{Outline0.5}% 14

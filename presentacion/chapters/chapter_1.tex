@@ -71,7 +71,7 @@
   \Fontit
   \begin{itemize}
     \item<1-> Transformada rápida de Fourier
-    \item<2-> Sumas/restas y multiplicaciones
+    \item<2-> Sumas, restas y multiplicaciones
     \item<3-> Cada salida = suma y resta de todas las entradas
   \end{itemize}
 
@@ -192,28 +192,39 @@
   \Fontit
   \begin{itemize}
     \item<1-> Diseñar un modulador/demodulador OFDM para un sistema de telecomunicaciones definido por
-    software que cumpla con el estandard ISDB-T.
-    \item<2-> Que sirva también como unidad de cómputo FFT/IFFT para procesamiento de señales. 
+    software que cumpla con el estándar ISDB-T
+    \item<2-> Que sirva también como unidad de cómputo FFT/IFFT para procesamiento de señales.
     \item<3-> Requerimientos
-    \only<4-9>{
       \begin{itemize}
           \Fontitit
-		  \item<4-9> Longitud configurable, incluyendo al menos 2K, 4K y 8K muestras (ISDB-T).
-		  \item<5-9> Frecuencia de muestreo mínima de $8,126,984$ muestras garantizada (ISDB-T).
-		  \item<6-9> Entrada y salida continua.
-		  \item<7-9> Aritmética de punto fijo.
-		  \item<8-9> Unidad de escalamiento configurable en ejecución con opción de seleccionar la etapa a escalar y el método (redondeo/truncamiento).
-		  \item<9-9> Menor consumo de espacio/recursos que otras implementaciones (ref: Xilinx IP FFT 7.0 y un core FFT abierto diseñado para modulación OFDM ISDB-T).
-	  \end{itemize}}
-    \item<10-> Realizar una evaluación de desempeño
-    \only<11-14>{\begin{itemize}
+		  \item<4-> Longitud configurable, incluyendo al menos 2K, 4K y 8K muestras
+		  (ISDB-T).
+		  \item<5-> Frecuencia de muestreo mínima de $8,126,984$ (según estándar ISDB-T)
+		  \item<6-> Entrada y salida continua
+		  \item<7-> Aritmética de punto fijo
+		  \item<8-> Unidad de escalamiento configurable en ejecución con opción de seleccionar la etapa a escalar y el método (redondeo/truncamiento)
+		  \item<9-> Bajo consumo de recursos comparados con otras
+		  implementaciones\footnotemark \footnotemark
+	  \end{itemize}
+	\end{itemize}
+	\uncover<9->{
+	\footnotetext[1]{Implementación abierta orientada a ISDB-T: Melo, R.,
+	Salom\'on, F., Valinoti, B., (2016) ``IP core FFT configurable en Runtime''}
+	\footnotetext[2]{Implementación propietaria Xilinx LogiCORE FFT 7.1}}
+\end{frame}
+
+\begin{frame}{Objetivos}
+  \Fontit
+  \begin{itemize}
+    \item<1-> Realizar una evaluación de desempeño
+    \begin{itemize}
       \Fontitit
-      \item<11-14> Funcionamiento
-      \item<12-14> Ruido / error
-      \item<13-14> Distorsión armónica
-      \item<14-14> Recursos
-    \end{itemize}}
-    \item<15-> Realizar una comparativa con desarrollos de terceros para evaluar el diseño realizado
-    \item<16-> Proponer trabajos futuros para continuar y mejorar el diseño.
+      \item<2-> Funcional
+      \item<3-> Ruido / error
+      \item<4-> Distorsión armónica
+      \item<5-> Recursos de HW
+    \end{itemize}
+    \item<6-> Realizar una comparativa con desarrollos de terceros para evaluar el diseño realizado
+    \item<7-> Proponer trabajos futuros para continuar y mejorar el diseño.
  \end{itemize}
 \end{frame}
