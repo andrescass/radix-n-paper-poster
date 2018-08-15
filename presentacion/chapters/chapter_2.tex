@@ -8,7 +8,36 @@
 
 \subsection{Transformada de Fourier}
 
-\begin{frame}{Algoritmos FFT}
+\begin{frame}{Arquitectura}
+	\begin{itemize}
+	    \Fontit
+	    \item<1-> Algoritmo: Radix-r
+	    \begin{itemize}
+	      \Fontitit
+	      \item<2-> Flexibilidad en la longitud
+	      \item<3-> Simplicidad en la implementación
+	      \item<4-> Posibilidad de reutilizar módulos
+	    \end{itemize} 
+	    \item<5-> Longitud del bloque: 2 y 4
+	    \begin{itemize}
+	      \Fontitit
+	      \item<6-> No implican multiplicaciones no triviales (solo por twiddle factors)
+	    \end{itemize}
+	    \item<7-> Implementación: arquitectura iterativa
+	    \begin{itemize}
+	      \item<8-> Un solo bloque para todos los cálculos
+	      \item<9-> Es la implementación más pequeña (requerimiento)
+	      \item<10-> Se computa una etapa a la vez
+	    \end{itemize}
+	\end{itemize}
+	\uncover<11->{
+      \begin{center}
+	    \advance\leftskip-0.2cm
+	    \includegraphics[scale=0.375]{./figures/r2sBf.png}
+      \end{center}
+     }
+	
+\end{frame}
   %\begin{block}{Comparativa de los algoritmos FFT}
 %   \begin{itemize}
 %     \item<1-> Comparativa de los algoritmos FFT
@@ -26,114 +55,114 @@
 %       tamaÃ±o, conocidos como radix-r.
 %     \end{itemize}
 %   \end{itemize}
-  \begin{itemize}
-    \Fontit
-    \item<1-> Existen varios algoritmos
-    \begin{itemize}
-      \Fontitit
-      \item<2-> Good-Thomas
-      \item<3-> Winograd
-      \item<4-> Cooley-Tuckey
-    \end{itemize} 
-    \item<5-> Se selecciona el algoritmo Radix-r (Cooley-Tuckey)
-    \begin{itemize}
-      \Fontitit
-      \item<6-> Flexibilidad en la longitud
-      \item<7-> Simplicidad en la implementación
-      \item<8-> Posibilidad de reutilizar módulos
-    \end{itemize}
-  \end{itemize}
-\end{frame}
-
-\begin{frame}{Cantidad de puntos por operación}
-  \begin{itemize}
-%     \item<1-> A mayor longitud de las DFTs interiores es menor la cantidad de DFTs interiores a
-%     realizar. Pero aumentan la cantidad de operaciones por DFT.
-    \item<1-> Cantidad de etapas
-    \item<2-> Cantidad de operaciones por etapa
-    \vfill
-    
-    \uncover<3->{\begin{tabular}{c c c c}
-		\textbf{Long. del bloque} & \textbf{Mult.} & \textbf{Mult. no triv} &
-		\textbf{sumas} \\ \hline 
-		$2$ & $2$ & \color<3->[rgb]{1,0,0}$0$ & $2$ \\
-		$3$ & $3$ & $2$ & $6$ \\
-		$4$ & $4$ & \color<3->[rgb]{1,0,0}$0$ & $8$ \\
-		$5$ & $6$ & $5$ & $17$ \\
-		$7$ & $9$ & $8$ & $36$ \\
-		$8$ & $8$ & $2$ & $26$ \\
-		$9$ & $11$ & $10$ & $44$ \\ \hline
-    \end{tabular}}
-    
-    \vfill
-
-  \item<4-> Se decide implementar dos arquitecturas: radix-2 y radix-4
-  \end{itemize}
-\end{frame}
-
-% \begin{frame}{Arquitecturas para la implementaciÃ³n radix-r}
-%   \begin{block}{Esquema radix-2 de 8 puntos}<1->
-%      \begin{center}
-% 	  \advance\leftskip-0.2cm
-% 	  \includegraphics[scale=0.42]{./figures/r2_8.png}
-%     \end{center}
-%   \end{block}
-%   
-%   %\only<2-3>{
 %   \begin{itemize}
-%     \item<2-> Cada cÃ­rculo representa una suma
-%     \item<3-> Cada flecha representa un producto
+%     \Fontit
+%     \item<1-> Existen varios algoritmos
+%     \begin{itemize}
+%       \Fontitit
+%       \item<2-> Good-Thomas
+%       \item<3-> Winograd
+%       \item<4-> Cooley-Tuckey
+%     \end{itemize} 
+%     \item<5-> Se selecciona el algoritmo Radix-r (Cooley-Tuckey)
+%     \begin{itemize}
+%       \Fontitit
+%       \item<6-> Flexibilidad en la longitud
+%       \item<7-> Simplicidad en la implementación
+%       \item<8-> Posibilidad de reutilizar módulos
+%     \end{itemize}
 %   \end{itemize}
-  %}
-%\end{frame}}
-  
-%   \only<4-5>{
+% \end{frame}
+% 
+% \begin{frame}{Cantidad de puntos por operación}
 %   \begin{itemize}
-%     \item<4-> Existen varias alternativas de implementaciÃ³n de este algoritmo
-%     \item<5-> Se diferencian en la forma en que se procesan las etapas del esquema
-%   \end{itemize}}
-%\end{frame}
-
-\begin{frame}{Arquitecturas para la implementación radix-r}
-  \begin{itemize}
-    \item<1-> Arquitectura paralela
-    \uncover<2-5>{
-      \begin{center}
-	    \advance\leftskip-0.2cm
-	    \includegraphics[scale=0.155]{./figures/r2_paralel.png}
-      \end{center}
-    }
-    \item<1-> Arquitectura desenrrollada
-    \uncover<3-5>{
-      \begin{center}
-	    \advance\leftskip-0.2cm
-	    \includegraphics[scale=0.275]{./figures/r2sdf_8.png}
-      \end{center}
-%     \begin{itemize}
-%       \item<8-> Un butterfly y un multiplicador por cada etapa
-%       \item<9-> Bus serie
-%       \item<10-> Pipeline
-%     \end{itemize}
-     }
-    \item<1-> Arquitectura iterativa
-    \uncover<4-5>{
-      \alt<4>{
-      \begin{center}
-	    \advance\leftskip-0.2cm
-	    \includegraphics[scale=0.375]{./figures/r2sBf.png}
-      \end{center}
-      }{
-      \begin{center}
-	    \advance\leftskip-0.2cm
-	    \includegraphics[scale=0.375]{./figures/r2sBf_sel2.png}
-      \end{center}
-      }
-%     \begin{itemize}
-%       \item<13-> Un Ãºnico buterfly y un Ãºnico multiplicador para todas las etapas
-%     \end{itemize}
-     }
-  \end{itemize}
-\end{frame}
+% %     \item<1-> A mayor longitud de las DFTs interiores es menor la cantidad de DFTs interiores a
+% %     realizar. Pero aumentan la cantidad de operaciones por DFT.
+%     \item<1-> Cantidad de etapas
+%     \item<2-> Cantidad de operaciones por etapa
+%     \vfill
+%     
+%     \uncover<3->{\begin{tabular}{c c c c}
+% 		\textbf{Long. del bloque} & \textbf{Mult.} & \textbf{Mult. no triv} &
+% 		\textbf{sumas} \\ \hline 
+% 		$2$ & $2$ & \color<3->[rgb]{1,0,0}$0$ & $2$ \\
+% 		$3$ & $3$ & $2$ & $6$ \\
+% 		$4$ & $4$ & \color<3->[rgb]{1,0,0}$0$ & $8$ \\
+% 		$5$ & $6$ & $5$ & $17$ \\
+% 		$7$ & $9$ & $8$ & $36$ \\
+% 		$8$ & $8$ & $2$ & $26$ \\
+% 		$9$ & $11$ & $10$ & $44$ \\ \hline
+%     \end{tabular}}
+%     
+%     \vfill
+% 
+%   \item<4-> Se decide implementar dos arquitecturas: radix-2 y radix-4
+%   \end{itemize}
+% \end{frame}
+% 
+% % \begin{frame}{Arquitecturas para la implementaciÃ³n radix-r}
+% %   \begin{block}{Esquema radix-2 de 8 puntos}<1->
+% %      \begin{center}
+% % 	  \advance\leftskip-0.2cm
+% % 	  \includegraphics[scale=0.42]{./figures/r2_8.png}
+% %     \end{center}
+% %   \end{block}
+% %   
+% %   %\only<2-3>{
+% %   \begin{itemize}
+% %     \item<2-> Cada cÃ­rculo representa una suma
+% %     \item<3-> Cada flecha representa un producto
+% %   \end{itemize}
+%   %}
+% %\end{frame}}
+%   
+% %   \only<4-5>{
+% %   \begin{itemize}
+% %     \item<4-> Existen varias alternativas de implementaciÃ³n de este algoritmo
+% %     \item<5-> Se diferencian en la forma en que se procesan las etapas del esquema
+% %   \end{itemize}}
+% %\end{frame}
+% 
+% \begin{frame}{Arquitecturas para la implementación radix-r}
+%   \begin{itemize}
+%     \item<1-> Arquitectura paralela
+%     \uncover<2-5>{
+%       \begin{center}
+% 	    \advance\leftskip-0.2cm
+% 	    \includegraphics[scale=0.155]{./figures/r2_paralel.png}
+%       \end{center}
+%     }
+%     \item<1-> Arquitectura desenrrollada
+%     \uncover<3-5>{
+%       \begin{center}
+% 	    \advance\leftskip-0.2cm
+% 	    \includegraphics[scale=0.275]{./figures/r2sdf_8.png}
+%       \end{center}
+% %     \begin{itemize}
+% %       \item<8-> Un butterfly y un multiplicador por cada etapa
+% %       \item<9-> Bus serie
+% %       \item<10-> Pipeline
+% %     \end{itemize}
+%      }
+%     \item<1-> Arquitectura iterativa
+%     \uncover<4-5>{
+%       \alt<4>{
+%       \begin{center}
+% 	    \advance\leftskip-0.2cm
+% 	    \includegraphics[scale=0.375]{./figures/r2sBf.png}
+%       \end{center}
+%       }{
+%       \begin{center}
+% 	    \advance\leftskip-0.2cm
+% 	    \includegraphics[scale=0.375]{./figures/r2sBf_sel2.png}
+%       \end{center}
+%       }
+% %     \begin{itemize}
+% %       \item<13-> Un Ãºnico buterfly y un Ãºnico multiplicador para todas las etapas
+% %     \end{itemize}
+%      }
+%   \end{itemize}
+% \end{frame}
 
 % \begin{frame}{SelecciÃ³n de arquitectura radix}
 %   \begin{center}

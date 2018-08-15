@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6730 64-bit) (preloaded format=pdflatex 2018.7.2)  13 AUG 2018 23:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6730 64-bit) (preloaded format=pdflatex 2018.7.2)  14 AUG 2018 22:15
 entering extended mode
 **./presentacion.tex
 (presentacion.tex
@@ -748,8 +748,6 @@ themedefault.sty")
 rthemedefault.sty")
 ("C:\Users\Andres\AppData\Local\Programs\MiKTeX 2.9\tex\latex\beamer\beamerinne
 rthemedefault.sty"
-! I can't write on file `presentacion.pdf'.
-Please type another file name for output: presentacion.pdf
 \beamer@dima=\dimen188
 \beamer@dimb=\dimen189
 )
@@ -1235,7 +1233,7 @@ Overfull \hbox (1.38435pt too wide) has occurred while \output is active
 
 
 (chapters/chapter_1.tex
-<./figures/freq_ort.png, id=176, 1037.8775pt x 223.83624pt>
+<./figures/freq_ort.png, id=157, 1037.8775pt x 223.83624pt>
 File: ./figures/freq_ort.png Graphic file (type png)
 <use ./figures/freq_ort.png>
 Package pdftex.def Info: ./figures/freq_ort.png  used on input line 68.
@@ -1263,7 +1261,7 @@ Overfull \hbox (1.38435pt too wide) has occurred while \output is active
 
 
  <./figures/freq_ort.png>]
-<./figures/freq_mux.png, id=223, 1036.87375pt x 225.84375pt>
+<./figures/freq_mux.png, id=199, 1036.87375pt x 225.84375pt>
 File: ./figures/freq_mux.png Graphic file (type png)
 <use ./figures/freq_mux.png>
 Package pdftex.def Info: ./figures/freq_mux.png  used on input line 68.
@@ -1312,7 +1310,7 @@ Overfull \hbox (1.38435pt too wide) has occurred while \output is active
 [6
 
 ]
-<./figures/soft_mod.png, id=380, 495.8525pt x 154.5775pt>
+<./figures/soft_mod.png, id=336, 495.8525pt x 154.5775pt>
 File: ./figures/soft_mod.png Graphic file (type png)
 <use ./figures/soft_mod.png>
 Package pdftex.def Info: ./figures/soft_mod.png  used on input line 87.
@@ -1497,13 +1495,24 @@ Overfull \hbox (1.38435pt too wide) has occurred while \output is active
 
 
 ]
+<./figures/r2sBf.png, id=1036, 257.96375pt x 150.5625pt>
+File: ./figures/r2sBf.png Graphic file (type png)
+<use ./figures/r2sBf.png>
+Package pdftex.def Info: ./figures/r2sBf.png  used on input line 40.
+(pdftex.def)             Requested size: 96.73616pt x 56.46078pt.
+
 Overfull \hbox (1.38435pt too wide) has occurred while \output is active
 [][] 
  []
 
 [27
 
-]
+ <./figures/r2sBf.png>]
+File: ./figures/r2sBf.png Graphic file (type png)
+<use ./figures/r2sBf.png>
+Package pdftex.def Info: ./figures/r2sBf.png  used on input line 40.
+(pdftex.def)             Requested size: 96.73616pt x 56.46078pt.
+
 Overfull \hbox (1.38435pt too wide) has occurred while \output is active
 [][] 
  []
@@ -1511,6 +1520,11 @@ Overfull \hbox (1.38435pt too wide) has occurred while \output is active
 [28
 
 ]
+File: ./figures/r2sBf.png Graphic file (type png)
+<use ./figures/r2sBf.png>
+Package pdftex.def Info: ./figures/r2sBf.png  used on input line 40.
+(pdftex.def)             Requested size: 96.73616pt x 56.46078pt.
+
 Overfull \hbox (1.38435pt too wide) has occurred while \output is active
 [][] 
  []
@@ -1518,6 +1532,11 @@ Overfull \hbox (1.38435pt too wide) has occurred while \output is active
 [29
 
 ]
+File: ./figures/r2sBf.png Graphic file (type png)
+<use ./figures/r2sBf.png>
+Package pdftex.def Info: ./figures/r2sBf.png  used on input line 40.
+(pdftex.def)             Requested size: 96.73616pt x 56.46078pt.
+
 Overfull \hbox (1.38435pt too wide) has occurred while \output is active
 [][] 
  []
@@ -1525,6 +1544,11 @@ Overfull \hbox (1.38435pt too wide) has occurred while \output is active
 [30
 
 ]
+File: ./figures/r2sBf.png Graphic file (type png)
+<use ./figures/r2sBf.png>
+Package pdftex.def Info: ./figures/r2sBf.png  used on input line 40.
+(pdftex.def)             Requested size: 96.73616pt x 56.46078pt.
+
 Overfull \hbox (1.38435pt too wide) has occurred while \output is active
 [][] 
  []
@@ -1532,6 +1556,11 @@ Overfull \hbox (1.38435pt too wide) has occurred while \output is active
 [31
 
 ]
+File: ./figures/r2sBf.png Graphic file (type png)
+<use ./figures/r2sBf.png>
+Package pdftex.def Info: ./figures/r2sBf.png  used on input line 40.
+(pdftex.def)             Requested size: 96.73616pt x 56.46078pt.
+
 Overfull \hbox (1.38435pt too wide) has occurred while \output is active
 [][] 
  []
@@ -1539,6 +1568,11 @@ Overfull \hbox (1.38435pt too wide) has occurred while \output is active
 [32
 
 ]
+File: ./figures/r2sBf.png Graphic file (type png)
+<use ./figures/r2sBf.png>
+Package pdftex.def Info: ./figures/r2sBf.png  used on input line 40.
+(pdftex.def)             Requested size: 96.73616pt x 56.46078pt.
+
 Overfull \hbox (1.38435pt too wide) has occurred while \output is active
 [][] 
  []
@@ -1546,6 +1580,11 @@ Overfull \hbox (1.38435pt too wide) has occurred while \output is active
 [33
 
 ]
+File: ./figures/r2sBf.png Graphic file (type png)
+<use ./figures/r2sBf.png>
+Package pdftex.def Info: ./figures/r2sBf.png  used on input line 40.
+(pdftex.def)             Requested size: 96.73616pt x 56.46078pt.
+
 Overfull \hbox (1.38435pt too wide) has occurred while \output is active
 [][] 
  []
@@ -1553,8 +1592,10 @@ Overfull \hbox (1.38435pt too wide) has occurred while \output is active
 [34
 
 ]
-LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <8> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 72.
+File: ./figures/r2sBf.png Graphic file (type png)
+<use ./figures/r2sBf.png>
+Package pdftex.def Info: ./figures/r2sBf.png  used on input line 40.
+(pdftex.def)             Requested size: 96.73616pt x 56.46078pt.
 
 Overfull \hbox (1.38435pt too wide) has occurred while \output is active
 [][] 
@@ -1563,6 +1604,11 @@ Overfull \hbox (1.38435pt too wide) has occurred while \output is active
 [35
 
 ]
+File: ./figures/r2sBf.png Graphic file (type png)
+<use ./figures/r2sBf.png>
+Package pdftex.def Info: ./figures/r2sBf.png  used on input line 40.
+(pdftex.def)             Requested size: 96.73616pt x 56.46078pt.
+
 Overfull \hbox (1.38435pt too wide) has occurred while \output is active
 [][] 
  []
@@ -1570,142 +1616,16 @@ Overfull \hbox (1.38435pt too wide) has occurred while \output is active
 [36
 
 ]
+File: ./figures/r2sBf.png Graphic file (type png)
+<use ./figures/r2sBf.png>
+Package pdftex.def Info: ./figures/r2sBf.png  used on input line 40.
+(pdftex.def)             Requested size: 96.73616pt x 56.46078pt.
+
 Overfull \hbox (1.38435pt too wide) has occurred while \output is active
 [][] 
  []
 
 [37
-
-]
-Overfull \hbox (1.38435pt too wide) has occurred while \output is active
-[][] 
- []
-
-[38
-
-]
-<./figures/r2_paralel.png, id=1661, 433.2185pt x 505.89pt>
-File: ./figures/r2_paralel.png Graphic file (type png)
-<use ./figures/r2_paralel.png>
-Package pdftex.def Info: ./figures/r2_paralel.png  used on input line 136.
-(pdftex.def)             Requested size: 67.14816pt x 78.41212pt.
-<./figures/r2sdf_8.png, id=1662, 812.03375pt x 150.5625pt>
-File: ./figures/r2sdf_8.png Graphic file (type png)
-<use ./figures/r2sdf_8.png>
-Package pdftex.def Info: ./figures/r2sdf_8.png  used on input line 136.
-(pdftex.def)             Requested size: 223.30377pt x 41.40366pt.
-<./figures/r2sBf_sel2.png, id=1663, 257.96375pt x 150.5625pt>
-File: ./figures/r2sBf_sel2.png Graphic file (type png)
-<use ./figures/r2sBf_sel2.png>
-Package pdftex.def Info: ./figures/r2sBf_sel2.png  used on input line 136.
-(pdftex.def)             Requested size: 96.73616pt x 56.46078pt.
-
-Overfull \vbox (3.1912pt too high) detected at line 136
- []
-
-
-Overfull \hbox (1.38435pt too wide) has occurred while \output is active
-[][] 
- []
-
-[39
-
- <./figures/r2_paralel.png> <./figures/r2sdf_8.png> <./figures/r2sBf_sel2.png>]
-File: ./figures/r2_paralel.png Graphic file (type png)
-<use ./figures/r2_paralel.png>
-Package pdftex.def Info: ./figures/r2_paralel.png  used on input line 136.
-(pdftex.def)             Requested size: 67.14816pt x 78.41212pt.
-File: ./figures/r2sdf_8.png Graphic file (type png)
-<use ./figures/r2sdf_8.png>
-Package pdftex.def Info: ./figures/r2sdf_8.png  used on input line 136.
-(pdftex.def)             Requested size: 223.30377pt x 41.40366pt.
-File: ./figures/r2sBf_sel2.png Graphic file (type png)
-<use ./figures/r2sBf_sel2.png>
-Package pdftex.def Info: ./figures/r2sBf_sel2.png  used on input line 136.
-(pdftex.def)             Requested size: 96.73616pt x 56.46078pt.
-
-Overfull \vbox (3.1912pt too high) detected at line 136
- []
-
-
-Overfull \hbox (1.38435pt too wide) has occurred while \output is active
-[][] 
- []
-
-[40
-
-]
-File: ./figures/r2_paralel.png Graphic file (type png)
-<use ./figures/r2_paralel.png>
-Package pdftex.def Info: ./figures/r2_paralel.png  used on input line 136.
-(pdftex.def)             Requested size: 67.14816pt x 78.41212pt.
-File: ./figures/r2sdf_8.png Graphic file (type png)
-<use ./figures/r2sdf_8.png>
-Package pdftex.def Info: ./figures/r2sdf_8.png  used on input line 136.
-(pdftex.def)             Requested size: 223.30377pt x 41.40366pt.
-File: ./figures/r2sBf_sel2.png Graphic file (type png)
-<use ./figures/r2sBf_sel2.png>
-Package pdftex.def Info: ./figures/r2sBf_sel2.png  used on input line 136.
-(pdftex.def)             Requested size: 96.73616pt x 56.46078pt.
-
-Overfull \vbox (3.1912pt too high) detected at line 136
- []
-
-
-Overfull \hbox (1.38435pt too wide) has occurred while \output is active
-[][] 
- []
-
-[41
-
-]
-File: ./figures/r2_paralel.png Graphic file (type png)
-<use ./figures/r2_paralel.png>
-Package pdftex.def Info: ./figures/r2_paralel.png  used on input line 136.
-(pdftex.def)             Requested size: 67.14816pt x 78.41212pt.
-File: ./figures/r2sdf_8.png Graphic file (type png)
-<use ./figures/r2sdf_8.png>
-Package pdftex.def Info: ./figures/r2sdf_8.png  used on input line 136.
-(pdftex.def)             Requested size: 223.30377pt x 41.40366pt.
-<./figures/r2sBf.png, id=1787, 257.96375pt x 150.5625pt>
-File: ./figures/r2sBf.png Graphic file (type png)
-<use ./figures/r2sBf.png>
-Package pdftex.def Info: ./figures/r2sBf.png  used on input line 136.
-(pdftex.def)             Requested size: 96.73616pt x 56.46078pt.
-
-Overfull \vbox (3.1912pt too high) detected at line 136
- []
-
-
-Overfull \hbox (1.38435pt too wide) has occurred while \output is active
-[][] 
- []
-
-[42
-
- <./figures/r2sBf.png>]
-File: ./figures/r2_paralel.png Graphic file (type png)
-<use ./figures/r2_paralel.png>
-Package pdftex.def Info: ./figures/r2_paralel.png  used on input line 136.
-(pdftex.def)             Requested size: 67.14816pt x 78.41212pt.
-File: ./figures/r2sdf_8.png Graphic file (type png)
-<use ./figures/r2sdf_8.png>
-Package pdftex.def Info: ./figures/r2sdf_8.png  used on input line 136.
-(pdftex.def)             Requested size: 223.30377pt x 41.40366pt.
-File: ./figures/r2sBf_sel2.png Graphic file (type png)
-<use ./figures/r2sBf_sel2.png>
-Package pdftex.def Info: ./figures/r2sBf_sel2.png  used on input line 136.
-(pdftex.def)             Requested size: 96.73616pt x 56.46078pt.
-
-Overfull \vbox (3.1912pt too high) detected at line 136
- []
-
-
-Overfull \hbox (1.38435pt too wide) has occurred while \output is active
-[][] 
- []
-
-[43
 
 ])
 \openout2 = `chapters/chapter_3.aux'.
@@ -1715,17 +1635,17 @@ Overfull \hbox (1.38435pt too wide) has occurred while \output is active
 [][] 
  []
 
-[44
+[38
 
 
 
 ]
-<./figures/r2_8_diag.png, id=1907, 424.422pt x 339.3405pt>
+<./figures/r2_8_diag.png, id=1457, 424.422pt x 339.3405pt>
 File: ./figures/r2_8_diag.png Graphic file (type png)
 <use ./figures/r2_8_diag.png>
 Package pdftex.def Info: ./figures/r2_8_diag.png  used on input line 40.
 (pdftex.def)             Requested size: 118.83734pt x 95.01468pt.
-<./figures/radix2blocks.png, id=1908, 570.13pt x 562.1pt>
+<./figures/radix2blocks.png, id=1458, 570.13pt x 562.1pt>
 File: ./figures/radix2blocks.png Graphic file (type png)
 <use ./figures/radix2blocks.png>
 Package pdftex.def Info: ./figures/radix2blocks.png  used on input line 40.
@@ -1735,7 +1655,7 @@ Overfull \hbox (1.38435pt too wide) has occurred while \output is active
 [][] 
  []
 
-[45
+[39
 
  <./figures/r2_8_diag.png> <./figures/radix2blocks.png>]
 File: ./figures/r2_8_diag.png Graphic file (type png)
@@ -1751,15 +1671,15 @@ Overfull \hbox (1.38435pt too wide) has occurred while \output is active
 [][] 
  []
 
-[46
+[40
 
 ]
-<./figures/r4_16.png, id=1990, 497.86pt x 369.38pt>
+<./figures/r4_16.png, id=1530, 497.86pt x 369.38pt>
 File: ./figures/r4_16.png Graphic file (type png)
 <use ./figures/r4_16.png>
 Package pdftex.def Info: ./figures/r4_16.png  used on input line 81.
 (pdftex.def)             Requested size: 149.35915pt x 110.81485pt.
-<./figures/radix4blocks.png, id=1991, 571.736pt x 568.9255pt>
+<./figures/radix4blocks.png, id=1531, 571.736pt x 568.9255pt>
 File: ./figures/radix4blocks.png Graphic file (type png)
 <use ./figures/radix4blocks.png>
 Package pdftex.def Info: ./figures/radix4blocks.png  used on input line 81.
@@ -1769,7 +1689,7 @@ Overfull \hbox (1.38435pt too wide) has occurred while \output is active
 [][] 
  []
 
-[47
+[41
 
  <./figures/r4_16.png> <./figures/radix4blocks.png>]
 File: ./figures/r4_16.png Graphic file (type png)
@@ -1785,10 +1705,10 @@ Overfull \hbox (1.38435pt too wide) has occurred while \output is active
 [][] 
  []
 
-[48
+[42
 
 ]
-<./figures/datapathMem.png, id=2073, 594.2565pt x 476.982pt>
+<./figures/datapathMem.png, id=1603, 594.2565pt x 476.982pt>
 File: ./figures/datapathMem.png Graphic file (type png)
 <use ./figures/datapathMem.png>
 Package pdftex.def Info: ./figures/datapathMem.png  used on input line 134.
@@ -1798,7 +1718,7 @@ Overfull \hbox (4.08112pt too wide) in paragraph at lines 134--134
  [] 
  []
 
-<./figures/r4control.png, id=2074, 511.9125pt x 485.4135pt>
+<./figures/r4control.png, id=1604, 511.9125pt x 485.4135pt>
 File: ./figures/r4control.png Graphic file (type png)
 <use ./figures/r4control.png>
 Package pdftex.def Info: ./figures/r4control.png  used on input line 134.
@@ -1808,7 +1728,7 @@ Overfull \hbox (1.38435pt too wide) has occurred while \output is active
 [][] 
  []
 
-[49
+[43
 
  <./figures/datapathMem.png> <./figures/r4control.png>]
 File: ./figures/datapathMem.png Graphic file (type png)
@@ -1829,7 +1749,7 @@ Overfull \hbox (1.38435pt too wide) has occurred while \output is active
 [][] 
  []
 
-[50
+[44
 
 ]
 File: ./figures/datapathMem.png Graphic file (type png)
@@ -1850,57 +1770,7 @@ Overfull \hbox (1.38435pt too wide) has occurred while \output is active
 [][] 
  []
 
-[51
-
-]
-File: ./figures/datapathMem.png Graphic file (type png)
-<use ./figures/datapathMem.png>
-Package pdftex.def Info: ./figures/datapathMem.png  used on input line 134.
-(pdftex.def)             Requested size: 163.4165pt x 131.16681pt.
-
-Overfull \hbox (4.08112pt too wide) in paragraph at lines 134--134
- [] 
- []
-
-File: ./figures/r4control.png Graphic file (type png)
-<use ./figures/r4control.png>
-Package pdftex.def Info: ./figures/r4control.png  used on input line 134.
-(pdftex.def)             Requested size: 139.24149pt x 132.03368pt.
-
-Overfull \vbox (2.35939pt too high) detected at line 134
- []
-
-
-Overfull \hbox (1.38435pt too wide) has occurred while \output is active
-[][] 
- []
-
-[52
-
-]
-File: ./figures/datapathMem.png Graphic file (type png)
-<use ./figures/datapathMem.png>
-Package pdftex.def Info: ./figures/datapathMem.png  used on input line 134.
-(pdftex.def)             Requested size: 163.4165pt x 131.16681pt.
-
-Overfull \hbox (4.08112pt too wide) in paragraph at lines 134--134
- [] 
- []
-
-File: ./figures/r4control.png Graphic file (type png)
-<use ./figures/r4control.png>
-Package pdftex.def Info: ./figures/r4control.png  used on input line 134.
-(pdftex.def)             Requested size: 139.24149pt x 132.03368pt.
-
-Overfull \vbox (2.35939pt too high) detected at line 134
- []
-
-
-Overfull \hbox (1.38435pt too wide) has occurred while \output is active
-[][] 
- []
-
-[53
+[45
 
 ]
 File: ./figures/datapathMem.png Graphic file (type png)
@@ -1921,57 +1791,7 @@ Overfull \hbox (1.38435pt too wide) has occurred while \output is active
 [][] 
  []
 
-[54
-
-]
-File: ./figures/datapathMem.png Graphic file (type png)
-<use ./figures/datapathMem.png>
-Package pdftex.def Info: ./figures/datapathMem.png  used on input line 134.
-(pdftex.def)             Requested size: 163.4165pt x 131.16681pt.
-
-Overfull \hbox (4.08112pt too wide) in paragraph at lines 134--134
- [] 
- []
-
-File: ./figures/r4control.png Graphic file (type png)
-<use ./figures/r4control.png>
-Package pdftex.def Info: ./figures/r4control.png  used on input line 134.
-(pdftex.def)             Requested size: 139.24149pt x 132.03368pt.
-
-Overfull \vbox (2.35939pt too high) detected at line 134
- []
-
-
-Overfull \hbox (1.38435pt too wide) has occurred while \output is active
-[][] 
- []
-
-[55
-
-]
-File: ./figures/datapathMem.png Graphic file (type png)
-<use ./figures/datapathMem.png>
-Package pdftex.def Info: ./figures/datapathMem.png  used on input line 134.
-(pdftex.def)             Requested size: 163.4165pt x 131.16681pt.
-
-Overfull \hbox (4.08112pt too wide) in paragraph at lines 134--134
- [] 
- []
-
-File: ./figures/r4control.png Graphic file (type png)
-<use ./figures/r4control.png>
-Package pdftex.def Info: ./figures/r4control.png  used on input line 134.
-(pdftex.def)             Requested size: 139.24149pt x 132.03368pt.
-
-Overfull \vbox (2.35939pt too high) detected at line 134
- []
-
-
-Overfull \hbox (1.38435pt too wide) has occurred while \output is active
-[][] 
- []
-
-[56
+[46
 
 ]
 File: ./figures/datapathMem.png Graphic file (type png)
@@ -1992,7 +1812,7 @@ Overfull \hbox (1.38435pt too wide) has occurred while \output is active
 [][] 
  []
 
-[57
+[47
 
 ]
 File: ./figures/datapathMem.png Graphic file (type png)
@@ -2013,7 +1833,7 @@ Overfull \hbox (1.38435pt too wide) has occurred while \output is active
 [][] 
  []
 
-[58
+[48
 
 ])
 \openout2 = `chapters/chapter_4.aux'.
@@ -2023,7 +1843,7 @@ Overfull \hbox (1.38435pt too wide) has occurred while \output is active
 [][] 
  []
 
-[59
+[49
 
 
 
@@ -2032,96 +1852,55 @@ Overfull \hbox (1.38435pt too wide) has occurred while \output is active
 [][] 
  []
 
-[60
+[50
 
 ]
 Overfull \hbox (1.38435pt too wide) has occurred while \output is active
 [][] 
  []
 
-[61
+[51
 
 ]
 Overfull \hbox (1.38435pt too wide) has occurred while \output is active
 [][] 
  []
 
-[62
+[52
 
 ]
 Overfull \hbox (1.38435pt too wide) has occurred while \output is active
 [][] 
  []
 
-[63
+[53
 
 ]
 Overfull \hbox (1.38435pt too wide) has occurred while \output is active
 [][] 
  []
 
-[64
+[54
 
 ]
 Overfull \hbox (1.38435pt too wide) has occurred while \output is active
 [][] 
  []
 
-[65
+[55
 
 ]
-<./figures/r2_delta7_16_4096_mul.png, id=2750, 1028.34187pt x 454.69875pt>
-File: ./figures/r2_delta7_16_4096_mul.png Graphic file (type png)
-<use ./figures/r2_delta7_16_4096_mul.png>
-Package pdftex.def Info: ./figures/r2_delta7_16_4096_mul.png  used on input lin
-e 46.
-(pdftex.def)             Requested size: 308.50494pt x 136.41068pt.
-
-Overfull \hbox (1.38435pt too wide) has occurred while \output is active
-[][] 
- []
-
-[66
-
- <./figures/r2_delta7_16_4096_mul.png (PNG copy)>]
-<./figures/r2_delta0_16_4096_mul.png, id=2791, 1028.34187pt x 454.69875pt>
-File: ./figures/r2_delta0_16_4096_mul.png Graphic file (type png)
-<use ./figures/r2_delta0_16_4096_mul.png>
-Package pdftex.def Info: ./figures/r2_delta0_16_4096_mul.png  used on input lin
-e 46.
-(pdftex.def)             Requested size: 308.50494pt x 136.41068pt.
-
-Overfull \hbox (1.38435pt too wide) has occurred while \output is active
-[][] 
- []
-
-[67
-
- <./figures/r2_delta0_16_4096_mul.png (PNG copy)>]
-File: ./figures/r2_delta7_16_4096_mul.png Graphic file (type png)
-<use ./figures/r2_delta7_16_4096_mul.png>
-Package pdftex.def Info: ./figures/r2_delta7_16_4096_mul.png  used on input lin
-e 46.
-(pdftex.def)             Requested size: 308.50494pt x 136.41068pt.
-
-Overfull \hbox (1.38435pt too wide) has occurred while \output is active
-[][] 
- []
-
-[68
-
-]
-<./figures/error_sim.png, id=2872, 254.916pt x 634.9905pt>
+<./figures/error_sim.png, id=2055, 254.916pt x 634.9905pt>
 File: ./figures/error_sim.png Graphic file (type png)
 <use ./figures/error_sim.png>
 Package pdftex.def Info: ./figures/error_sim.png  used on input line 98.
 (pdftex.def)             Requested size: 76.47537pt x 190.49861pt.
-<./figures/norm1_1024_12.png, id=2873, 385.44pt x 289.08pt>
+<./figures/norm1_1024_12.png, id=2056, 385.44pt x 289.08pt>
 File: ./figures/norm1_1024_12.png Graphic file (type png)
 <use ./figures/norm1_1024_12.png>
 Package pdftex.def Info: ./figures/norm1_1024_12.png  used on input line 98.
 (pdftex.def)             Requested size: 115.63289pt x 86.72466pt.
-<./figures/norm1_r2_16_4096_mul.png, id=2874, 391.4625pt x 281.55188pt>
+<./figures/norm1_r2_16_4096_mul.png, id=2057, 391.4625pt x 281.55188pt>
 File: ./figures/norm1_r2_16_4096_mul.png Graphic file (type png)
 <use ./figures/norm1_r2_16_4096_mul.png>
 Package pdftex.def Info: ./figures/norm1_r2_16_4096_mul.png  used on input line
@@ -2132,10 +1911,13 @@ Overfull \hbox (1.38435pt too wide) has occurred while \output is active
 [][] 
  []
 
-[69
+[56
 
  <./figures/error_sim.png> <./figures/norm1_1024_12.png (PNG copy)> <./figures/
 norm1_r2_16_4096_mul.png (PNG copy)>]
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <8> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 134.
+
 Overfull \hbox (4.55153pt too wide) detected at line 134
 [][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][] 
  []
@@ -2145,23 +1927,10 @@ Overfull \hbox (1.38435pt too wide) has occurred while \output is active
 [][] 
  []
 
-[70
+[57
 
 ]
-<./figures/thd_sim.png, id=2954, 244.7325pt x 755.8785pt>
-File: ./figures/thd_sim.png Graphic file (type png)
-<use ./figures/thd_sim.png>
-Package pdftex.def Info: ./figures/thd_sim.png  used on input line 155.
-(pdftex.def)             Requested size: 66.07864pt x 204.08992pt.
-
-Overfull \hbox (1.38435pt too wide) has occurred while \output is active
-[][] 
- []
-
-[71
-
- <./figures/thd_sim.png>]
-<./figures/thd_r2_4096_16_cor.png, id=2995, 1028.34187pt x 454.69875pt>
+<./figures/thd_r2_4096_16_cor.png, id=2128, 1028.34187pt x 454.69875pt>
 File: ./figures/thd_r2_4096_16_cor.png Graphic file (type png)
 <use ./figures/thd_r2_4096_16_cor.png>
 Package pdftex.def Info: ./figures/thd_r2_4096_16_cor.png  used on input line 2
@@ -2172,7 +1941,7 @@ Overfull \hbox (21.17087pt too wide) in paragraph at lines 214--214
  [] 
  []
 
-<./figures/thd_r4_1024_16_mul.png, id=2996, 1028.34187pt x 454.69875pt>
+<./figures/thd_r4_1024_16_mul.png, id=2129, 1028.34187pt x 454.69875pt>
 File: ./figures/thd_r4_1024_16_mul.png Graphic file (type png)
 <use ./figures/thd_r4_1024_16_mul.png>
 Package pdftex.def Info: ./figures/thd_r4_1024_16_mul.png  used on input line 2
@@ -2183,7 +1952,7 @@ Overfull \hbox (21.17087pt too wide) in paragraph at lines 214--214
  [] 
  []
 
-<./figures/thd_kiss_4096_16.png, id=2997, 1028.34187pt x 454.69875pt>
+<./figures/thd_kiss_4096_16.png, id=2130, 1028.34187pt x 454.69875pt>
 File: ./figures/thd_kiss_4096_16.png Graphic file (type png)
 <use ./figures/thd_kiss_4096_16.png>
 Package pdftex.def Info: ./figures/thd_kiss_4096_16.png  used on input line 214
@@ -2194,7 +1963,7 @@ Overfull \hbox (21.17087pt too wide) in paragraph at lines 214--214
  [] 
  []
 
-<./figures/thd_xilinx_r4_16_1024.png, id=2998, 1026.83624pt x 453.94594pt>
+<./figures/thd_xilinx_r4_16_1024.png, id=2131, 1026.83624pt x 453.94594pt>
 File: ./figures/thd_xilinx_r4_16_1024.png Graphic file (type png)
 <use ./figures/thd_xilinx_r4_16_1024.png>
 Package pdftex.def Info: ./figures/thd_xilinx_r4_16_1024.png  used on input lin
@@ -2210,73 +1979,12 @@ Overfull \hbox (1.38435pt too wide) has occurred while \output is active
 [][] 
  []
 
-[72
+[58
 
  <./figures/thd_r2_4096_16_cor.png (PNG copy)> <./figures/thd_r4_1024_16_mul.pn
 g (PNG copy)> <./figures/thd_kiss_4096_16.png (PNG copy)> <./figures/thd_xilinx
 _r4_16_1024.png (PNG copy)>]
-<./figures/virtex_chip.jpg, id=3038, 225.84375pt x 225.84375pt>
-File: ./figures/virtex_chip.jpg Graphic file (type jpg)
-<use ./figures/virtex_chip.jpg>
-Package pdftex.def Info: ./figures/virtex_chip.jpg  used on input line 339.
-(pdftex.def)             Requested size: 72.27147pt x 72.27147pt.
-
-Overfull \hbox (1.38435pt too wide) has occurred while \output is active
-[][] 
- []
-
-[73
-
- <./figures/virtex_chip.jpg>]
-File: ./figures/virtex_chip.jpg Graphic file (type jpg)
-<use ./figures/virtex_chip.jpg>
-Package pdftex.def Info: ./figures/virtex_chip.jpg  used on input line 339.
-(pdftex.def)             Requested size: 72.27147pt x 72.27147pt.
-
-Overfull \hbox (1.38435pt too wide) has occurred while \output is active
-[][] 
- []
-
-[74
-
-]
-File: ./figures/virtex_chip.jpg Graphic file (type jpg)
-<use ./figures/virtex_chip.jpg>
-Package pdftex.def Info: ./figures/virtex_chip.jpg  used on input line 339.
-(pdftex.def)             Requested size: 72.27147pt x 72.27147pt.
-
-Overfull \hbox (1.38435pt too wide) has occurred while \output is active
-[][] 
- []
-
-[75
-
-]
-File: ./figures/virtex_chip.jpg Graphic file (type jpg)
-<use ./figures/virtex_chip.jpg>
-Package pdftex.def Info: ./figures/virtex_chip.jpg  used on input line 339.
-(pdftex.def)             Requested size: 72.27147pt x 72.27147pt.
-
-Overfull \hbox (1.38435pt too wide) has occurred while \output is active
-[][] 
- []
-
-[76
-
-]
-File: ./figures/virtex_chip.jpg Graphic file (type jpg)
-<use ./figures/virtex_chip.jpg>
-Package pdftex.def Info: ./figures/virtex_chip.jpg  used on input line 339.
-(pdftex.def)             Requested size: 72.27147pt x 72.27147pt.
-
-Overfull \hbox (1.38435pt too wide) has occurred while \output is active
-[][] 
- []
-
-[77
-
-]
-<./figures/sizecomp1024.png, id=3239, 455.45157pt x 255.95625pt>
+<./figures/sizecomp1024.png, id=2166, 455.45157pt x 255.95625pt>
 File: ./figures/sizecomp1024.png Graphic file (type png)
 <use ./figures/sizecomp1024.png>
 Package pdftex.def Info: ./figures/sizecomp1024.png  used on input line 352.
@@ -2291,10 +1999,10 @@ Overfull \hbox (1.38435pt too wide) has occurred while \output is active
 [][] 
  []
 
-[78
+[59
 
  <./figures/sizecomp1024.png (PNG copy)>]
-<./figures/sizecomp4096.png, id=3279, 455.45157pt x 255.95625pt>
+<./figures/sizecomp4096.png, id=2201, 455.45157pt x 255.95625pt>
 File: ./figures/sizecomp4096.png Graphic file (type png)
 <use ./figures/sizecomp4096.png>
 Package pdftex.def Info: ./figures/sizecomp4096.png  used on input line 363.
@@ -2309,7 +2017,7 @@ Overfull \hbox (1.38435pt too wide) has occurred while \output is active
 [][] 
  []
 
-[79
+[60
 
  <./figures/sizecomp4096.png (PNG copy)>]
 Overfull \hbox (4.55153pt too wide) detected at line 454
@@ -2321,7 +2029,7 @@ Overfull \hbox (1.38435pt too wide) has occurred while \output is active
 [][] 
  []
 
-[80
+[61
 
 ]
 Overfull \hbox (4.55153pt too wide) detected at line 454
@@ -2333,7 +2041,7 @@ Overfull \hbox (1.38435pt too wide) has occurred while \output is active
 [][] 
  []
 
-[81
+[62
 
 ]
 Overfull \hbox (4.55153pt too wide) detected at line 454
@@ -2345,14 +2053,14 @@ Overfull \hbox (1.38435pt too wide) has occurred while \output is active
 [][] 
  []
 
-[82
+[63
 
 ])
 Overfull \hbox (1.38435pt too wide) has occurred while \output is active
 [][] 
  []
 
-[83
+[64
 
 
 ]
@@ -2360,84 +2068,84 @@ Overfull \hbox (1.38435pt too wide) has occurred while \output is active
 [][] 
  []
 
-[84
+[65
 
 ]
 Overfull \hbox (1.38435pt too wide) has occurred while \output is active
 [][] 
  []
 
-[85
+[66
 
 ]
 Overfull \hbox (1.38435pt too wide) has occurred while \output is active
 [][] 
  []
 
-[86
+[67
 
 ]
 Overfull \hbox (1.38435pt too wide) has occurred while \output is active
 [][] 
  []
 
-[87
+[68
 
 ]
 Overfull \hbox (1.38435pt too wide) has occurred while \output is active
 [][] 
  []
 
-[88
+[69
 
 ]
 Overfull \hbox (1.38435pt too wide) has occurred while \output is active
 [][] 
  []
 
-[89
+[70
 
 ]
 Overfull \hbox (1.38435pt too wide) has occurred while \output is active
 [][] 
  []
 
-[90
+[71
 
 ]
 Overfull \hbox (1.38435pt too wide) has occurred while \output is active
 [][] 
  []
 
-[91
+[72
 
 ]
 Overfull \hbox (1.38435pt too wide) has occurred while \output is active
 [][] 
  []
 
-[92
+[73
 
 ]
 Overfull \hbox (1.38435pt too wide) has occurred while \output is active
 [][] 
  []
 
-[93
+[74
 
 ]
 Overfull \hbox (1.38435pt too wide) has occurred while \output is active
 [][] 
  []
 
-[94
+[75
 
 ]
 Overfull \hbox (1.38435pt too wide) has occurred while \output is active
 [][] 
  []
 
-[95
+[76
 
 ]
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <9> not available
@@ -2447,35 +2155,35 @@ Overfull \hbox (1.38435pt too wide) has occurred while \output is active
 [][] 
  []
 
-[96
+[77
 
 ]
 Overfull \hbox (1.38435pt too wide) has occurred while \output is active
 [][] 
  []
 
-[97
+[78
 
 ]
 Overfull \hbox (1.38435pt too wide) has occurred while \output is active
 [][] 
  []
 
-[98
+[79
 
 ]
 Overfull \hbox (1.38435pt too wide) has occurred while \output is active
 [][] 
  []
 
-[99
+[80
 
 ]
 Overfull \hbox (1.38435pt too wide) has occurred while \output is active
 [][] 
  []
 
-[100
+[81
 
 ]
 \tf@nav=\write8
@@ -2497,16 +2205,16 @@ LaTeX Info: Redefining \% on input line 23.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 171.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 171.
 Package rerunfilecheck Info: File `presentacion.out' has not changed.
-(rerunfilecheck)             Checksum: 982738B95FEA7979A70F71CCAA391C89;996.
+(rerunfilecheck)             Checksum: F0ED419D70F7F1B9274EF51DFEE00524;930.
  ) 
 Here is how much of TeX's memory you used:
- 26252 strings out of 492973
- 532419 string characters out of 3126250
- 673834 words of memory out of 3000000
- 29305 multiletter control sequences out of 15000+200000
+ 26163 strings out of 492973
+ 530919 string characters out of 3126250
+ 668074 words of memory out of 3000000
+ 29263 multiletter control sequences out of 15000+200000
  45503 words of font info for 57 fonts, out of 3000000 for 9000
  1142 hyphenation exceptions out of 8191
- 62i,20n,85p,782b,829s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 62i,20n,85p,782b,769s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/Andres/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.en
 c}<C:/Users/Andres/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfont
 s/cmextra/cmex8.pfb><C:/Users/Andres/AppData/Local/Programs/MiKTeX 2.9/fonts/ty
@@ -2519,9 +2227,9 @@ rs/Andres/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy
 ic/uhvb8a.pfb><C:/Users/Andres/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/ur
 w/helvetic/uhvr8a.pfb><C:/Users/Andres/AppData/Local/Programs/MiKTeX 2.9/fonts/
 type1/urw/helvetic/uhvro8a.pfb>
-Output written on presentacion.pdf (100 pages, 1993849 bytes).
+Output written on presentacion.pdf (81 pages, 1567849 bytes).
 PDF statistics:
- 4233 PDF objects out of 4296 (max. 8388607)
- 216 named destinations out of 1000 (max. 500000)
- 293 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 3038 PDF objects out of 3580 (max. 8388607)
+ 177 named destinations out of 1000 (max. 500000)
+ 250 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -17,36 +17,36 @@
   \end{itemize}
 \end{frame}
 
-\subsection{Señales Patrón}
-
-\begin{frame}{Señales patrón}
-  \uncover<1->{
-  \begin{itemize}
-    \item<1-> Se realizaron pruebas utilizando como entrada deltas en diferentes compoenentes y se
-    analizó su salida. Por ejemplo:
-    \begin{itemize}
-      \item<2-> Una delta en posición `0'
-      \item<3-> Una delta en posición `6'
-    \end{itemize}
-  \end{itemize}
-  }
-  \uncover<2->{
-    \alt<2>{
-      \begin{center}
-        \advance\leftskip-0.2cm
-        \includegraphics[scale=0.3]{./figures/r2_delta0_16_4096_mul.png}
-      \end{center}
-    }{
-      \begin{center}
-        \advance\leftskip-0.2cm
-        \includegraphics[scale=0.3]{./figures/r2_delta7_16_4096_mul.png}
-      \end{center}
-    }
-  }
-\end{frame}
+% \subsection{Señales Patrón}
+% 
+% \begin{frame}{Señales patrón}
+%   \uncover<1->{
+%   \begin{itemize}
+%     \item<1-> Se realizaron pruebas utilizando como entrada deltas en diferentes compoenentes y se
+%     analizó su salida. Por ejemplo:
+%     \begin{itemize}
+%       \item<2-> Una delta en posición `0'
+%       \item<3-> Una delta en posición `6'
+%     \end{itemize}
+%   \end{itemize}
+%   }
+%   \uncover<2->{
+%     \alt<2>{
+%       \begin{center}
+%         \advance\leftskip-0.2cm
+%         \includegraphics[scale=0.3]{./figures/r2_delta0_16_4096_mul.png}
+%       \end{center}
+%     }{
+%       \begin{center}
+%         \advance\leftskip-0.2cm
+%         \includegraphics[scale=0.3]{./figures/r2_delta7_16_4096_mul.png}
+%       \end{center}
+%     }
+%   }
+% \end{frame}
 
 \subsection{Medición del error}
-\begin{frame}{}%{MÃ©tricas de error}
+\begin{frame}{Medición del error}%{MÃ©tricas de error}
 %   \only<1-8>{
 %   \begin{itemize}
 %     \item<1-> Las mÃ©tricas utilizadas para estimar el error fueron
@@ -134,27 +134,27 @@
 \end{frame}
 
 \subsection{Medición de la THD}
-\begin{frame}{Medición de la THD}
-%   \only<1-5>{
-%   \begin{itemize}
-%     \item<1-> Las arquitecturas se comportan como sistemas no lineales
-%     \item<2-> Para medir completamente la THD no alcanza con medir para algunas frecuencias
-%     \item<3-> Se midiÃ³ la THD para entradas delta en cada una de las componentes para cada
-%     arquitectura
-%     \item<4-> Se tomÃ³ la salida de cada simulaciÃ³n y se calculÃ³ la THD mediante Matlab.
-%     \item<5-> Se contrastÃ³ con la THD de la arquitectura Kiss FFT en C++.
-%   \end{itemize}
-%   }
-  
-%  \only<6>{
-    \begin{center}
-      \advance\leftskip-0.2cm
-      \includegraphics[scale=0.27]{./figures/thd_sim.png}
-    \end{center}
-%  }  
-\end{frame}
+% \begin{frame}{Medición de la THD}
+% %   \only<1-5>{
+% %   \begin{itemize}
+% %     \item<1-> Las arquitecturas se comportan como sistemas no lineales
+% %     \item<2-> Para medir completamente la THD no alcanza con medir para algunas frecuencias
+% %     \item<3-> Se midiÃ³ la THD para entradas delta en cada una de las componentes para cada
+% %     arquitectura
+% %     \item<4-> Se tomÃ³ la salida de cada simulaciÃ³n y se calculÃ³ la THD mediante Matlab.
+% %     \item<5-> Se contrastÃ³ con la THD de la arquitectura Kiss FFT en C++.
+% %   \end{itemize}
+% %   }
+%   
+% %  \only<6>{
+%     \begin{center}
+%       \advance\leftskip-0.2cm
+%       \includegraphics[scale=0.27]{./figures/thd_sim.png}
+%     \end{center}
+% %  }  
+% \end{frame}
 
-\begin{frame}{THD - Resultados}
+\begin{frame}{Medición de la THD}
   \begin{columns}[T]
     \begin{column}{.5\textwidth}
       %\only<1-1>{
@@ -314,31 +314,31 @@
 % \end{frame}
 
 \subsection{Recursos de Implementación}
-\begin{frame}{Recursos de implementación}
-    \begin{columns}[T]
-      \begin{column}{.53\textwidth}
-      \begin{itemize}
-        \item<1-> Uno de los requerimientos es la economía de recursos
-        \item<2-> FPGA XC5VLX110, de la familia Virtex-5 de Xilinx.
-        \item<3-> Se comparó con dos arquitecturas
-        \begin{itemize}
-          \item<4-> Radix-2 desenrrollada
-          \item<5-> Xilinx LogiCORE FFT 7.1
-        \end{itemize}
-      \end{itemize}
-      \end{column}
-      \begin{column}{.47\textwidth}
-        \centering
-        \begin{center}
-		  \advance\leftskip-0.2cm
-		  \includegraphics[scale=0.32]{./figures/virtex_chip.jpg}
-		\end{center}
-      \end{column}
-    \end{columns}
-%   \end{itemize}
-\end{frame}
+% \begin{frame}{Recursos de implementación}
+%     \begin{columns}[T]
+%       \begin{column}{.53\textwidth}
+%       \begin{itemize}
+%         \item<1-> Uno de los requerimientos es la economía de recursos
+%         \item<2-> FPGA XC5VLX110, de la familia Virtex-5 de Xilinx.
+%         \item<3-> Se comparó con dos arquitecturas
+%         \begin{itemize}
+%           \item<4-> Radix-2 desenrrollada
+%           \item<5-> Xilinx LogiCORE FFT 7.1
+%         \end{itemize}
+%       \end{itemize}
+%       \end{column}
+%       \begin{column}{.47\textwidth}
+%         \centering
+%         \begin{center}
+% 		  \advance\leftskip-0.2cm
+% 		  \includegraphics[scale=0.32]{./figures/virtex_chip.jpg}
+% 		\end{center}
+%       \end{column}
+%     \end{columns}
+% %   \end{itemize}
+% \end{frame}
 
-\begin{frame}{Resultados para 1024 puntos}
+\begin{frame}{Tamaño de implementación para 1024 puntos}
 %  \uncover<3-3>{
 %   \begin{columns}[T]
 %     \begin{column}{.5\textwidth}
@@ -351,7 +351,7 @@
 %     \end{column}
 \end{frame}
 
-\begin{frame}{Resultados para 4096 puntos}
+\begin{frame}{Tamaño de implementación para 4096 puntos}
 %     \begin{column}{.5\textwidth}
 		\begin{center}
 		  %\advance\leftskip-0.2cm
